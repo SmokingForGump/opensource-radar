@@ -1,0 +1,455 @@
+{
+  "baseline_note": "本期为定时榜单快照；采集时间如上。未建立可比历史基线的项目不作增长判断。",
+  "edition": "weekly",
+  "id": "weekly-2026-10-22",
+  "observed_at": "2026-10-22T08:15:44.612396Z",
+  "projects": [
+    {
+      "audience": "安全研究人员、逆向工程师、需要理解第三方应用行为的开发者，以及使用支持本地 MCP 代理的团队。",
+      "category": "engineering",
+      "claims": [
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "REA 的 README 描述其通过 MCP 将代理连接到原生二进制、JavaScript/Electron 应用、.NET 程序集和网站检查工具。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 声称分析在本地运行，结果包含证据与局限。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 指出深度原生分析可使用已有的 Hopper、Ghidra 或 IDA，静态 JavaScript 分析不需要原生分析引擎。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明运行时捕获会以用户权限运行或交互目标，各运行时指南描述其影响。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "仓库元数据记录的星标总数为 360734，许可证标注为 MIT。"
+        }
+      ],
+      "full_name": "morluto/rea",
+      "license_spdx": "MIT",
+      "limitations": [
+        "需要 Node.js 22/24/26 及 npm，部分目标还依赖额外工具链。",
+        "深度原生分析需要已有的 Hopper、Ghidra 或 IDA 等分析器，格式与平台支持因提供方而异。",
+        "APK、设备、抓包、固件、WASM 等场景依赖调用方提供的 JADX、adb、TShark、pwntools、WABT 等外部工具。",
+        "运行时捕获会以用户权限运行或交互目标，可能产生文件系统、进程或设备副作用。",
+        "README 说明分析在本地进行，但代理模型提供方另有数据政策，不能据此推断端到端隐私保证。",
+        "功能矩阵很广，安装、提供方配置和平台前置条件可能带来较高使用门槛。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1209966933,
+      "sources": [
+        {
+          "excerpt": "morluto/rea Reverse engineer anything with agents, from app behavior down to native binaries.",
+          "id": "metadata",
+          "url": "https://github.com/morluto/rea"
+        },
+        {
+          "excerpt": "REA connects your agent to tools for inspecting native binaries, JavaScript and Electron apps, .NET assemblies, and websites. You can also use the same tools from your terminal. Analysis runs locally, and results include the evidence and limitations behind each conclusion. Setup registers REA with your agent and installs matching workflow instructions. Native analysis can use an existing Hopper, Ghidra, or IDA installation; setup can optionally install Hopper with approval. Static JavaScript analysis needs no native analysis engine.",
+          "id": "readme",
+          "url": "https://github.com/morluto/rea/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-10-22T08:15:44.612396Z",
+        "stars_total": 360734
+      },
+      "summary": "REA 是面向代理的 MCP 逆向工程工具集，用于分析二进制、应用与运行时行为并返回带证据的结果。",
+      "try_it": [
+        "选择一个你有权分析的小型本地应用，让代理先总结模块、入口点和关键依赖，并逐条核对证据。",
+        "针对一个具体功能提问，要求同时给出伪代码或汇编片段、调用关系以及结论的不确定性说明。",
+        "在涉及设备、进程、抓包或固件前，先阅读对应指南并确认操作权限与可能副作用。",
+        "把一次分析结果整理成“事实—证据—待验证假设”清单，再决定是否据此实现类似功能。"
+      ],
+      "url": "https://github.com/morluto/rea",
+      "why": "README 显示其把原生二进制、JavaScript/Electron、.NET、APK、固件等多种分析目标接入代理工作流，并强调结论附带证据与局限；这可能降低从“观察功能”到“理解实现”的门槛，但实际效果仍取决于目标类型、外部分析器和代理能力。"
+    },
+    {
+      "audience": "科研软件工程师、数据科学家、实验室信息学人员，以及希望把智能体接入科研工作流的团队。",
+      "category": "knowledge",
+      "claims": [
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "仓库采用 MIT 许可证。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 称该集合包含 177 个科学和研究技能。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明这些技能遵循 Agent Skills 开放标准，并可与 Cursor、Claude Code、Codex、Google Antigravity 等兼容。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 称 Database Lookup 技能记录了 80 个数据库。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 提到每个技能都有 SKILL.md，包含目的、工作流和版本元数据。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明带脚本的技能在 tests/ 下有对应测试套件和依赖条目。"
+        }
+      ],
+      "full_name": "K-Dense-AI/scientific-agent-skills",
+      "license_spdx": "MIT",
+      "limitations": [
+        "README 中的技能数量、用户规模和兼容性属于项目自述，未在输入中独立验证。",
+        "不同技能的质量、依赖和测试覆盖可能不一致；README 也说明科学依赖在独立环境中测试。",
+        "部分数据库、平台或临床/监管技能可能依赖外部账号、授权数据或专业复核，不能直接用于决策。",
+        "输入只给出 MIT 许可证标识，不推断其法律适用性或第三方内容的许可状态。",
+        "未实际安装或运行，无法确认具体宿主中的发现、加载和执行效果。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1079456184,
+      "sources": [
+        {
+          "excerpt": "K-Dense-AI/scientific-agent-skills Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+          "id": "metadata",
+          "url": "https://github.com/K-Dense-AI/scientific-agent-skills"
+        },
+        {
+          "excerpt": "Each provides guidance for a specific package, data source, or workflow, including the scientific conventions and validation checks needed to use it.",
+          "id": "readme",
+          "url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-10-22T08:15:44.612396Z",
+        "stars_total": 53712
+      },
+      "summary": "面向科研智能体的开源技能库，用 177 个结构化流程把科学数据库、Python 包和研究工作流变成可复用的操作知识。",
+      "try_it": [
+        "先选一个与当前研究流程最接近的技能，阅读其技能文档中的适用边界、输入输出和验证步骤。",
+        "在受控的小型项目中让智能体按技能文档执行一次分析，并记录数据来源、参数和人工复核点。",
+        "对照技能中的版本元数据和依赖说明，检查本地环境是否匹配，避免直接复用旧版工作流。",
+        "为团队建立技能准入清单，优先采用带脚本、测试和明确验证边界的技能。",
+        "对涉及临床、监管或动物实验的技能，安排领域专家复核输出，不把技能建议当作决策规则。"
+      ],
+      "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "why": "它把分散的科研工具文档整理成智能体可加载的技能，覆盖数据库查询、组学分析、临床研究边界和科学写作，可能降低研究流程搭建与交接成本；同时强调版本、验证和来源，适合作为团队知识资产。"
+    },
+    {
+      "audience": "安全研究人员、恶意代码分析师、二进制分析学习者、需要自定义逆向分析工具的工程团队",
+      "category": "engineering",
+      "claims": [
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "Ghidra 是 NSA 研究部门创建并维护的软件逆向工程框架。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 列出其能力包括反汇编、汇编、反编译、图形化和脚本，并支持用户交互与自动化模式。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明用户可以使用 Java 或 Python 开发 Ghidra 扩展组件或脚本。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "仓库元数据标注许可证为 Apache-2.0，星标总数约为 9.3 万。"
+        }
+      ],
+      "full_name": "NationalSecurityAgency/ghidra",
+      "license_spdx": "Apache-2.0",
+      "limitations": [
+        "README 提示某些版本存在已知安全漏洞，使用前需要查阅安全公告并评估版本风险。",
+        "从源码构建需要 JDK 25、Gradle、Python3 以及平台相关编译工具，构建门槛较高。",
+        "官方发布包与源码包用途不同，首次使用者容易混淆下载内容。",
+        "逆向工程工具通常有较高学习曲线，非专业用户上手成本可能较高。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 173228436,
+      "sources": [
+        {
+          "excerpt": "NationalSecurityAgency/ghidra Ghidra is a software reverse engineering (SRE) framework",
+          "id": "metadata",
+          "url": "https://github.com/NationalSecurityAgency/ghidra"
+        },
+        {
+          "excerpt": "This framework includes a suite of full-featured, high-end software analysis tools that enable users to analyze compiled code on a variety of platforms including Windows, macOS, and Linux. Capabilities include disassembly, assembly, decompilation, graphing, and scripting, along with hundreds of other features. Ghidra supports a wide variety of processor instruction sets and executable formats and can be run in both user-interactive and automated modes. Users may also develop their own Ghidra extension components and/or scripts using Java or Python.",
+          "id": "readme",
+          "url": "https://github.com/NationalSecurityAgency/ghidra/blob/master/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-10-22T08:15:44.612396Z",
+        "stars_total": 92796
+      },
+      "summary": "Ghidra 是由 NSA 研究部门创建并维护的开源软件逆向工程框架，支持多平台代码分析与扩展开发。",
+      "try_it": [
+        "先阅读安全公告和入门文档，确认所选版本的风险与运行要求。",
+        "使用官方预构建发布包，对自有或已获授权的样本体验反汇编与反编译流程。",
+        "熟悉界面后，尝试用 Java 或 Python 编写一个简单脚本或扩展。",
+        "若需要二次开发，再依据开发者指南准备构建环境并评估维护成本。"
+      ],
+      "url": "https://github.com/NationalSecurityAgency/ghidra",
+      "why": "它面向反汇编、反编译、图形化分析和脚本扩展等逆向工程任务，并支持 Java 或 Python 扩展，可能适合安全研究、恶意代码分析和二进制分析教学；其高星标数说明社区关注度较高，但实际效率与适用性仍需结合具体场景验证。"
+    },
+    {
+      "audience": "需要本地语音克隆、配音、转写或有声书生产的创作者与团队；关注数据隐私和离线工作流的产品/工程人员；以及研究语音产品集成方式的开发者。",
+      "category": "product",
+      "claims": [
+        {
+          "evidence_ids": [
+            "metadata",
+            "readme"
+          ],
+          "text": "仓库描述称 VoiceStudio 是开源的、完全本地的 ElevenLabs 替代品，功能覆盖声音克隆、声音设计、视频配音、听写、转写和有声书制作。"
+        },
+        {
+          "evidence_ids": [
+            "metadata",
+            "readme"
+          ],
+          "text": "README 将应用许可证标为 AGPL-3.0，并说明模型权重、分词器、声音和生成输出的条件单独适用。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 列出 NVIDIA GPU CUDA、Apple Silicon Metal、无独显 CPU 以及 Windows on ARM 实验性支持等硬件路径。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 提供本地 API、MCP、示例和移动端预览等文档入口。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明 Electron 是唯一桌面应用和 Web UI，0.5.3 是最后一个 Tauri 版本。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "元数据记录该仓库有 80,898 个星标。"
+        }
+      ],
+      "full_name": "debpalash/VoiceStudio",
+      "license_spdx": "AGPL-3.0",
+      "limitations": [
+        "README 宣称支持 646 种语言并实现完全本地运行，但输入未提供独立基准或第三方评测，语言覆盖、音质和延迟需自行验证。",
+        "AGPL-3.0 只覆盖应用；README 明确模型权重、分词器、声音与生成输出条件单独适用，不能据此推定可商用或可自由分发。",
+        "声音克隆带来同意、版权和深度伪造风险；README 要求仅在有许可时克隆，实际合规责任仍在使用者。",
+        "硬件支持因引擎而异；无独显可 CPU 运行但可能较慢，Intel Mac 仅 UI 并需连接远程后端。",
+        "安装脚本、下载链接和版本迁移说明来自 README，本次研究未执行或验证其可用性与安全性。",
+        "仓库星标数很高，但输入未包含社区活跃度、发布审计或安全审查证据，不宜仅凭星标判断成熟度。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1206390571,
+      "sources": [
+        {
+          "excerpt": "debpalash/VoiceStudio VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+          "id": "metadata",
+          "url": "https://github.com/debpalash/VoiceStudio"
+        },
+        {
+          "excerpt": "VoiceStudio Open-source voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages. Website · Download · Get started · Docs · Discord · 简体中文 · 日本語",
+          "id": "readme",
+          "url": "https://github.com/debpalash/VoiceStudio/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-10-22T08:15:44.612396Z",
+        "stars_total": 80898
+      },
+      "summary": "VoiceStudio 是一个本地优先的开源语音工作台，面向声音克隆、声音设计、视频配音、听写、转写与有声书制作，并宣称覆盖 646 种语言。",
+      "try_it": [
+        "先阅读功能目录、引擎指南和许可证说明，按语言、硬件和隐私要求筛选可用工作流。",
+        "在隔离测试机上用自有授权录音和短文本做一次克隆、配音与转写小样，记录音质、延迟和资源占用。",
+        "用同一批文本与说话人对本地结果和现有服务做盲测，不只看星标或宣传语。",
+        "若考虑团队集成，评估本地 API 与 MCP 的权限边界、日志留存和模型下载管理。",
+        "在试用前准备合规清单：声音授权、模型许可、输出使用范围和 AGPL 义务。"
+      ],
+      "url": "https://github.com/debpalash/VoiceStudio",
+      "why": "它把多种语音生产环节收进一个桌面产品，并提供本地 API、MCP 与模型管理线索，对关注隐私、离线运行和 ElevenLabs 替代方案的产品与工程团队有参考价值；其跨平台硬件说明和文档入口也可能降低评估成本。需要说明的是，646 种语言、音质和性能均来自 README/描述，尚未在本研究中复现，应视为待验证宣称。"
+    },
+    {
+      "audience": "使用 Claude Code、Copilot、Cursor 等 AI 编码工具的开发者与平台工程团队，尤其是长会话、多工具调用场景。",
+      "category": "engineering",
+      "claims": [
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "仓库元数据显示该项目获得 31,721 个 stars，描述为面向 AI 编码代理的上下文窗口优化工具。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 称其是 MCP server，提供沙箱工具以减少原始数据进入上下文，并将会话事件写入 SQLite、用 FTS5/BM25 检索。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 列出 Claude Code、Gemini CLI、VS Code Copilot、JetBrains Copilot、GitHub Copilot CLI、Cursor 等平台的安装与 hooks 配置，并称支持 17 个平台。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 将 315 KB 到 5.4 KB、98% reduction 作为项目自述效果。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "输入中的许可证字段为 NOASSERTION。"
+        }
+      ],
+      "full_name": "mksglu/context-mode",
+      "license_spdx": "NOASSERTION",
+      "limitations": [
+        "输入中的许可证字段为 NOASSERTION，使用前需自行核实许可证与合规要求。",
+        "README 中的 98% 缩减、315 KB 到 5.4 KB 等效果为项目自述，未在输入中提供可复现实验细节。",
+        "集成依赖各客户端对 MCP 与 hooks 的支持，配置项较多，部分平台在 README 中仍标注为进行中。",
+        "会持久化并索引会话与文件内容到本地 SQLite，需评估敏感数据处理、保留期限与清理策略。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1164477708,
+      "sources": [
+        {
+          "excerpt": "mksglu/context-mode Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+          "id": "metadata",
+          "url": "https://github.com/mksglu/context-mode"
+        },
+        {
+          "excerpt": "Every MCP tool call dumps raw data into your context window. A Playwright snapshot costs 56 KB. Twenty GitHub issues cost 59 KB. One access log — 45 KB. After 30 minutes, 40% of your context is gone. And when the agent compacts the conversation to free space, it forgets which files it was editing, what tasks are in progress, and what you last asked for. On top of that, the agent wastes output tokens on filler, pleasantries, and verbose explanations — burning context from both sides.",
+          "id": "readme",
+          "url": "https://github.com/mksglu/context-mode/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-10-22T08:15:44.612396Z",
+        "stars_total": 31721
+      },
+      "summary": "面向 AI 编码代理的上下文窗口优化工具，通过 MCP 沙箱工具输出、会话记忆持久化和路由约束减少上下文消耗。",
+      "try_it": [
+        "在隔离测试项目中对比同一长会话任务开启与关闭该工具时的上下文占用和回答质量。",
+        "先只启用 MCP 工具而不启用自动路由，观察模型是否会主动采用沙箱工具替代原始读取。",
+        "用项目自带的统计与诊断能力检查节省比例、hook 注册和索引状态是否正常。",
+        "与团队确认本地索引数据的保留、导出和删除流程后再用于真实代码库。",
+        "对仍标注为进行中的平台集成暂缓全面部署，先做小范围验证。"
+      ],
+      "url": "https://github.com/mksglu/context-mode",
+      "why": "其核心价值在于把工具原始输出留在上下文之外，并用 SQLite/FTS5 做会话事件检索；对长会话编码代理可能减少上下文膨胀和压缩后失忆。README 还给出多平台 hooks 集成与 98% 缩减的项目自述，产品思路有启发，但效果需独立验证。"
+    },
+    {
+      "audience": "使用 Cursor 的开发者、AI 代理工作流设计者、希望构建插件市场或接入 SaaS/MCP 集成的工程团队，以及关注教学与知识管理自动化的个人。",
+      "category": "engineering",
+      "claims": [
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 将仓库描述为面向流行开发工具、框架和 SaaS 产品的官方 Cursor 插件集合。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明每个插件位于仓库根目录下的独立目录，并拥有自己的 `.cursor-plugin/plugin.json` 清单。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 列出教学、持续学习、代码审查、并行云代理编排以及多种第三方 SaaS 集成等插件类别。"
+        },
+        {
+          "evidence_ids": [
+            "readme",
+            "metadata"
+          ],
+          "text": "README 末尾标注 License MIT；metadata 的 license_spdx 为 null。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "metadata 显示 stars_total 为 13484，描述为 Cursor plugin specification and official plugins。"
+        }
+      ],
+      "full_name": "cursor/plugins",
+      "license_spdx": null,
+      "limitations": [
+        "给定 README 主要是插件目录与仓库结构说明，单个插件的权限、认证和数据流细节需查阅各自文档。",
+        "第三方 SaaS 与金融、邮件、CRM 等集成可能需要相应账号和授权，实际可用性可能受服务条款、地区和服务端配置影响。",
+        "README 末尾标注 MIT，但 metadata 的 license_spdx 为 null；各插件目录另有 LICENSE，使用前应逐项核对。",
+        "材料未提供统一的兼容性矩阵、维护 SLA 或安全审计结论，不能据此推断生产可用性。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1140229822,
+      "sources": [
+        {
+          "excerpt": "cursor/plugins Cursor plugin specification and official plugins",
+          "id": "metadata",
+          "url": "https://github.com/cursor/plugins"
+        },
+        {
+          "excerpt": "Official Cursor plugins for popular developer tools, frameworks, and SaaS products. Each plugin is a standalone directory at the repository root with its own `.cursor-plugin/plugin.json` manifest.",
+          "id": "readme",
+          "url": "https://github.com/cursor/plugins/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-10-22T08:15:44.612396Z",
+        "stars_total": 13484
+      },
+      "summary": "Cursor 官方插件规范与插件集合，按独立目录收录面向开发工具、框架和 SaaS 产品的代理插件。",
+      "try_it": [
+        "浏览 marketplace.json 了解插件分类和清单组织方式，作为设计自有代理插件市场的参考。",
+        "挑选一个与现有工作流接近的插件（如 GitHub 或 Playwright），阅读其插件清单、技能和规则文件，评估接入成本。",
+        "将教学或持续学习类插件作为知识管理试点，先在小范围记录学习计划与复盘流程。",
+        "如果关注团队工程效率，可对比 thermos、orchestrate 与 cursor-team-kit 的工作流设计，提炼可复用的审查与验证模式。"
+      ],
+      "url": "https://github.com/cursor/plugins",
+      "why": "它把代理技能、规则、MCP 配置和插件清单组织成可复用目录，可能为构建插件市场、设计代理工作流以及接入第三方服务提供参考；README 同时列出教学、持续学习和代码审查等非纯编码场景，价值不只在代码生成。"
+    }
+  ],
+  "scheduled_for": "2026-10-22",
+  "schema_version": 1,
+  "summary": "从公开资料中精选 6 个值得进一步了解的项目，附适用场景、限制和原始证据。",
+  "title": "开源周刊 · 2026-10-22"
+}

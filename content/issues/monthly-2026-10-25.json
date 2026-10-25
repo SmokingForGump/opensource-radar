@@ -1,0 +1,318 @@
+{
+  "baseline_note": "本期为定时榜单快照；采集时间如上。未建立可比历史基线的项目不作增长判断。",
+  "edition": "monthly",
+  "id": "monthly-2026-10-25",
+  "observed_at": "2026-10-25T06:13:18.661085Z",
+  "projects": [
+    {
+      "audience": "前端/全栈工程师、视频自动化与内容流水线开发者、使用 AI 编码代理制作技术演示的团队，以及需要把设计系统转成视频模板的设计工程团队。",
+      "category": "engineering",
+      "claims": [
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "项目将 HTML、CSS、媒体与可定位动画转换为确定性的 MP4 视频。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "项目提供 CLI，并面向 AI 编码代理提供技能集成。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "渲染流程在无头 Chrome 中逐帧定位，并用 FFmpeg 编码，目标是相同输入产生相同视频。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 列出产品发布、数据可视化、社交视频、文档转视频等可构建场景。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "仓库许可证为 Apache-2.0。"
+        }
+      ],
+      "full_name": "heygen-com/hyperframes",
+      "license_spdx": "Apache-2.0",
+      "limitations": [
+        "本地使用需 Node.js 22+ 与 FFmpeg，环境准备可能增加上手成本。",
+        "逐帧无头 Chrome 渲染对复杂动画或长视频的资源消耗可能较高；输入未提供性能基准。",
+        "项目强调可定位动画，依赖实时交互或壁钟驱动的网页效果可能需要改造或适配。",
+        "代理插件、技能注册表与云渲染路径涉及额外生态组件，输入未提供安全审计或成本细节。",
+        "许可证仅按输入记录为 Apache-2.0，不据此推断具体法律适用性或商业条款。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1177402105,
+      "sources": [
+        {
+          "excerpt": "heygen-com/hyperframes Write HTML. Render video. Built for agents.",
+          "id": "metadata",
+          "url": "https://github.com/heygen-com/hyperframes"
+        },
+        {
+          "excerpt": "HyperFrames is an open-source framework for turning HTML, CSS, media, and seekable animations into deterministic MP4 videos. Use it locally with the CLI, from AI coding agents with skills, or as the rendering core behind hosted authoring workflows.",
+          "id": "readme",
+          "url": "https://github.com/heygen-com/hyperframes/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-10-25T06:13:18.661085Z",
+        "stars_total": 71611
+      },
+      "summary": "HyperFrames 是以 HTML/CSS 和可定位动画为输入、通过 CLI 与代理技能生成确定性 MP4 的开源视频渲染框架。",
+      "try_it": [
+        "从 README 的渲染契约入手，先确认最小 HTML 合成需要哪些时间与轨道属性。",
+        "制作一个 5–10 秒的标题淡入动画，对比浏览器预览与导出视频的帧一致性。",
+        "选一个现有品牌设计规范，尝试映射到 frame.md 的影片设计规范，观察代理能否稳定复用。",
+        "小范围评估把 Lottie 或现有动画片段接入适配器的可行性，并逐帧检查定位行为。",
+        "若考虑团队落地，先在持续集成中验证固定输入的重复渲染一致性，再决定是否扩展。"
+      ],
+      "url": "https://github.com/heygen-com/hyperframes",
+      "why": "其价值在于把视频合成变成可版本控制、可由编码代理读写的 HTML 文件，并用逐帧定位渲染减少“预览与成片不一致”的风险；对需要自动化出片、模板化动效或把设计系统转成视频的团队，可能降低工程门槛。它同时覆盖 CLI、渲染引擎、组件目录与云渲染路径，工程落地启发比单纯追求星标更有意义。"
+    },
+    {
+      "audience": "负责代码安全审计、应用安全工程和 AI 代理工作流搭建的研发与安全团队。",
+      "category": "engineering",
+      "claims": [
+        {
+          "evidence_ids": [
+            "metadata",
+            "readme"
+          ],
+          "text": "该仓库由 Cloudflare 发布，描述为面向编码代理的多阶段安全审计技能，强调独立验证与机器可读发现。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明流程包含侦察、覆盖驱动狩猎、候选验证、结构化输出、独立记录验证和目标中立报告六个阶段。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 要求使用支持工具调用和并行子代理的编码代理，并需要 Node.js 运行校验器。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 要求在目标代码执行构建、测试、进程、浏览器、模拟器、模糊测试或夹具时使用强制隔离且禁网的沙箱。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "元数据标注星标总数为 45118，许可证为 MIT。"
+        }
+      ],
+      "full_name": "cloudflare/security-audit-skill",
+      "license_spdx": "MIT",
+      "limitations": [
+        "需要支持工具调用和并行子代理的编码代理，并非所有代理环境都能直接满足。",
+        "运行零依赖校验器需要 Node.js。",
+        "README 要求在执行目标代码的构建、测试、进程、浏览器、模拟器、模糊测试或夹具时使用强制隔离且禁网的沙箱；缺少这些控制时相关工作只会保留为待验证状态。",
+        "当前仅依据公开元数据和 README 评估，未实际运行或验证其审计效果与性能。",
+        "元数据标注许可证为 MIT，但输入未提供完整许可证文本，不能据此推断具体法律适用性。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1273427276,
+      "sources": [
+        {
+          "excerpt": "cloudflare/security-audit-skill A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+          "id": "metadata",
+          "url": "https://github.com/cloudflare/security-audit-skill"
+        },
+        {
+          "excerpt": "The skill runs a structured audit in six phases: 1. **Reconnaissance** -- map architecture, trust boundaries, input surfaces, prior evidence, and deterministic coverage in `architecture.md` and `coverage-ledger.json`.",
+          "id": "readme",
+          "url": "https://github.com/cloudflare/security-audit-skill/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-10-25T06:13:18.661085Z",
+        "stars_total": 45118
+      },
+      "summary": "一个把编码代理组织成多阶段安全审计流程、并以可校验机器可读记录输出发现的技能包。",
+      "try_it": [
+        "选择一个边界清晰的代码仓库，先按流程整理架构、信任边界和输入面，再决定审计重点。",
+        "安排一个未参与发现的独立代理复核候选结论，重点尝试反证而非重复确认。",
+        "用机器可读发现记录和覆盖台账做多轮对比，观察后续审计是否补足前一轮的覆盖缺口。",
+        "把确认、待验证和已驳回三类结论分开跟踪，避免把防御纵深建议误记为漏洞。",
+        "在隔离受控环境中评估其流程设计，并记录哪些环节依赖代理平台能力。"
+      ],
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "why": "它把侦察、覆盖驱动狩猎、候选验证、独立复核和报告拆成清晰阶段，并配套发现与覆盖台账的校验器，可能提升安全审计的可追溯性和可复现性；其“发现者与验证者分离”的对抗式思路对代理工作流工程化有参考价值。"
+    },
+    {
+      "audience": "使用 Claude Cowork 或 Claude Code 的知识工作者、团队管理员，以及需要为组织定制岗位助手的产品、运营和工程人员。",
+      "category": "knowledge",
+      "claims": [
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "该仓库是面向知识工作者的开源插件集合，主要供 Claude Cowork 使用并兼容 Claude Code。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 列出 11 个插件，覆盖生产力、销售、客户支持、产品管理、市场、法务、财务、数据、企业搜索、生物研究和插件管理等场景。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "每个插件由清单、工具连接配置、斜杠命令和技能等文件组成，README 称其基于 markdown 和 JSON 且无代码、无基础设施、无构建步骤。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "输入元数据将许可证标注为 Apache-2.0。"
+        }
+      ],
+      "full_name": "anthropics/knowledge-work-plugins",
+      "license_spdx": "Apache-2.0",
+      "limitations": [
+        "依赖 Claude Cowork 或 Claude Code 生态，并非可独立运行的通用工具。",
+        "插件连接 Slack、Notion、Jira 等第三方服务时，账号、权限与数据治理成本未在 README 中展开。",
+        "仓库提供的是通用起点，需结合公司术语、流程和工具栈定制后才可能发挥更大价值。",
+        "README 未提供性能、安全、合规或实际业务效果的验证数据。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1140828898,
+      "sources": [
+        {
+          "excerpt": "anthropics/knowledge-work-plugins Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+          "id": "metadata",
+          "url": "https://github.com/anthropics/knowledge-work-plugins"
+        },
+        {
+          "excerpt": "Each plugin bundles the skills, connectors, slash commands, and sub-agents for a specific job function. Out of the box, they give Claude a strong starting point for helping anyone in that role. The real power comes when you customize them for your company — your tools, your terminology, your processes — so Claude works like it was built for your team.",
+          "id": "readme",
+          "url": "https://github.com/anthropics/knowledge-work-plugins/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-10-25T06:13:18.661085Z",
+        "stars_total": 32710
+      },
+      "summary": "面向知识工作者的 Claude Cowork/Code 插件集合，按岗位封装技能、命令与工具连接器。",
+      "try_it": [
+        "先按岗位挑选一个插件，阅读其技能与操作清单，判断是否覆盖你的高频工作流。",
+        "用团队真实术语和流程改写技能说明，并与现有工具连接方式做小范围对照。",
+        "在受控数据范围内验证一个明确任务，记录输出质量、人工复核点和权限需求。",
+        "参考现有插件结构，为尚未覆盖的岗位整理一个最小插件草案。"
+      ],
+      "url": "https://github.com/anthropics/knowledge-work-plugins",
+      "why": "从 README 看，它把角色化工作流、工具连接和显式操作拆成可读的 markdown/JSON 文件，便于团队按自身术语与流程改造；对知识管理、产品运营和跨工具检索有直接启发，但实际效果取决于连接器配置与组织上下文。"
+    },
+    {
+      "audience": "AI 代理平台与基础设施工程师、负责代理上线的安全与合规评审者、需要在隔离环境中运行自动化任务的后端团队。",
+      "category": "engineering",
+      "claims": [
+        {
+          "evidence_ids": [
+            "metadata",
+            "readme"
+          ],
+          "text": "仓库元数据标注该项目许可证为 Apache-2.0，README 亦声明以 Apache License 2.0 授权。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 称 OpenShell 在每个代理的隔离沙箱中实施内核级控制，限制可访问的文件与可发起的系统调用，网络连接在离开沙箱前需通过策略检查。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明策略变更在获批前会经过形式化验证，用于标记新增的高风险访问并等待人工审查。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 提到代理不会接触真实凭据，凭据仅由 OpenShell 附加到发往已批准端点的请求上。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 列出 Python、TypeScript、Go、Rust 四种语言的 SDK，并说明 SDK 用于连接网关而非安装命令行工具。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 要求 Linux、Apple Silicon 上的 macOS，或带 WSL 2 的 Windows（标注为实验性），并需要 Docker、Podman 或主机虚拟化。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明会收集限于运维类别与计数的匿名遥测，不收集沙箱名、主机名、文件路径、提示词、凭据、提供方或模型名称及用户内容，并可通过配置关闭。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "元数据显示该仓库累计约 19608 个 stars。"
+        }
+      ],
+      "full_name": "NVIDIA/OpenShell",
+      "license_spdx": "Apache-2.0",
+      "limitations": [
+        "输入中只有 README 与元数据，缺少可核验的隔离强度基准、性能数据或第三方安全评估",
+        "运行依赖 Docker、Podman 或主机虚拟化；Windows 需 WSL 2 且被标注为实验性",
+        "默认收集匿名遥测，需通过配置显式关闭",
+        "部分 SDK（如 TypeScript）经 GitHub Packages 分发，可能需要额外的包源与权限配置",
+        "README 对策略与网关的行为描述较概括，实际规则表达能力需对照官方文档才能判断",
+        "除 Apache-2.0 许可证外，输入未提供合规适用性说明；README 亦声明对外部检索材料不承担责任",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1166129534,
+      "sources": [
+        {
+          "excerpt": "NVIDIA/OpenShell OpenShell is the safe, private runtime for autonomous AI agents.",
+          "id": "metadata",
+          "url": "https://github.com/NVIDIA/OpenShell"
+        },
+        {
+          "excerpt": "OpenShell is the safe, private runtime for fleets of autonomous AI agents. Agents are most useful when they can read files, install packages, call APIs, and use credentials. OpenShell gives them that capability without giving them unrestricted access to your data, secrets, or network. You declare what each agent can touch in a policy, and OpenShell enforces it.",
+          "id": "readme",
+          "url": "https://github.com/NVIDIA/OpenShell/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-10-25T06:13:18.661085Z",
+        "stars_total": 19608
+      },
+      "summary": "NVIDIA 开源的 AI 代理运行时，用沙箱、内核级策略与凭据隔离约束自主代理对文件、系统调用和网络的访问。",
+      "try_it": [
+        "在一台可丢弃的测试机上按官方快速上手创建默认沙箱，先确认其默认能力边界",
+        "编写一份最小策略限制文件访问与网络出口，再用测试代理验证越界请求是否被拦截",
+        "演练一次新增外部主机访问的策略变更，观察顾问与证明环节如何标记风险并等待人工确认",
+        "通过 Python SDK 连接本地网关，做一次只读的沙箱状态查询以了解控制面接口形态",
+        "结合官方 Kubernetes 文档评估网关部署与集群 NetworkPolicy 的配合方式",
+        "在关闭匿名遥测的配置下运行一段时间，观察日志与可观测性输出是否满足内部审计需要"
+      ],
+      "url": "https://github.com/NVIDIA/OpenShell",
+      "why": "它把“代理能不能读文件、装包、调 API、用凭据”从提示词层面的约定，下沉为运行时的强制约束，并额外提供策略变更的形式化审查环节，这对想让代理承接真实任务又不敢放开权限的团队有直接参考价值。SDK 覆盖 Python/TypeScript/Go/Rust 且有 Kubernetes 部署与扩展点说明，说明其定位偏向平台基座而非单点工具；其实际隔离强度与性能仍需独立验证。"
+    }
+  ],
+  "scheduled_for": "2026-10-25",
+  "schema_version": 1,
+  "summary": "从公开资料中精选 4 个值得进一步了解的项目，附适用场景、限制和原始证据。",
+  "title": "Monthly 深度精选 · 2026-10-25"
+}

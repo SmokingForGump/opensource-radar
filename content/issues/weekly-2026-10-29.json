@@ -1,0 +1,467 @@
+{
+  "baseline_note": "本期为定时榜单快照；采集时间如上。未建立可比历史基线的项目不作增长判断。",
+  "edition": "weekly",
+  "id": "weekly-2026-10-29",
+  "observed_at": "2026-10-29T07:11:29.069144Z",
+  "projects": [
+    {
+      "audience": "使用 Claude Code、Cursor 等编码代理的开发者、技术负责人，以及需要制定代理协作规范的团队。",
+      "category": "engineering",
+      "claims": [
+        {
+          "evidence_ids": [
+            "metadata",
+            "readme"
+          ],
+          "text": "仓库描述称其为一个改善 Claude Code 行为的单一 CLAUDE.md 文件，内容源自 Andrej Karpathy 对 LLM 编码陷阱的观察。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 列出四项原则：Think Before Coding、Simplicity First、Surgical Changes、Goal-Driven Execution。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明这些准则可合并到项目已有的 CLAUDE.md，或作为 Claude Code 插件使用。"
+        },
+        {
+          "evidence_ids": [
+            "metadata",
+            "readme"
+          ],
+          "text": "元数据中 stars_total 为 226093，license_spdx 为空；README 末尾自述许可证为 MIT。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 指出准则偏向谨慎而非速度，并建议在琐碎任务上自行判断。"
+        }
+      ],
+      "full_name": "multica-ai/andrej-karpathy-skills",
+      "license_spdx": null,
+      "limitations": [
+        "仓库核心是 Markdown 指南而非可执行软件，效果依赖模型、项目与使用者执行方式。",
+        "README 所述改进效果未提供基准测试、对照实验或量化数据。",
+        "元数据未给出 SPDX 许可证，README 仅自述 MIT；不进一步推断法律适用性。",
+        "指南偏向谨慎，README 也承认在琐碎任务上可能降低速度。",
+        "README 含安装与命令行操作说明，但本研究未执行也未验证其可用性。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1142983825,
+      "sources": [
+        {
+          "excerpt": "multica-ai/andrej-karpathy-skills A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+          "id": "metadata",
+          "url": "https://github.com/multica-ai/andrej-karpathy-skills"
+        },
+        {
+          "excerpt": "Strong success criteria let the LLM loop independently. Weak criteria (\"make it work\") require constant clarification.",
+          "id": "readme",
+          "url": "https://github.com/multica-ai/andrej-karpathy-skills/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-10-29T07:11:29.069144Z",
+        "stars_total": 226093
+      },
+      "summary": "一份将 Andrej Karpathy 对 LLM 编码陷阱的观察提炼为四条 Claude Code 行为准则的 CLAUDE.md 指南。",
+      "try_it": [
+        "先在一个小型缺陷修复任务中，把“列出假设、给出成功标准、仅做必要改动”作为代理执行前的检查项。",
+        "用同一任务对比启用与不启用这些准则时的 diff 大小、澄清问题和返工情况，记录可观察差异。",
+        "把四项原则合并进现有项目规范，并补充项目特有的测试与错误处理要求。",
+        "在代码评审中逐条核对：是否存在未说明的假设、过度抽象、无关改动和不可验证目标。"
+      ],
+      "url": "https://github.com/multica-ai/andrej-karpathy-skills",
+      "why": "它把“先思考、保持简单、外科式修改、目标驱动验证”变成可直接用于代理协作和代码评审的规范；相比单纯提示技巧，可能更容易落实到具体 diff 与验收标准。其价值在工程流程和知识提炼上较清晰，但实际改进幅度尚缺量化证据。"
+    },
+    {
+      "audience": "知识型团队负责人、产品与运营人员、销售/法务/财务等职能团队，以及希望定制 Claude 工作流的插件开发者。",
+      "category": "product",
+      "claims": [
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "输入元数据将该仓库描述为面向知识工作者、主要在 Claude Cowork 中使用的开源插件仓库。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 列出的插件数量为 11 个，覆盖生产力、销售、客户支持、产品管理、营销、法务、财务、数据、企业搜索、生物研究和插件管理。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明每个插件包含插件清单、MCP 连接配置、斜杠命令和技能目录。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 称所有组件均为基于 Markdown 和 JSON 的文件，不需要编写代码、搭建基础设施或构建步骤。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "输入元数据标注该仓库许可证为 Apache-2.0。"
+        }
+      ],
+      "full_name": "anthropics/knowledge-work-plugins",
+      "license_spdx": "Apache-2.0",
+      "limitations": [
+        "README 未提供插件效果评估、性能数据或生产环境验证。",
+        "使用依赖 Claude Cowork 或 Claude Code，并涉及 Slack、Notion、Jira、Microsoft 365 等第三方连接器。",
+        "插件被定位为通用起点，需按公司术语、流程和工具栈定制后才可能更贴合实际。",
+        "README 未展开连接器权限、数据治理、安全审计和合规责任边界。",
+        "输入仅标注许可证为 Apache-2.0，未提供其他合规或法律适用信息。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1140828898,
+      "sources": [
+        {
+          "excerpt": "anthropics/knowledge-work-plugins Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+          "id": "metadata",
+          "url": "https://github.com/anthropics/knowledge-work-plugins"
+        },
+        {
+          "excerpt": "Out of the box, they give Claude a strong starting point for helping anyone in that role. The real power comes when you customize them for your company — your tools, your terminology, your processes — so Claude works like it was built for your team.",
+          "id": "readme",
+          "url": "https://github.com/anthropics/knowledge-work-plugins/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-10-29T07:11:29.069144Z",
+        "stars_total": 33712
+      },
+      "summary": "面向知识工作者的 Claude 插件集合，把销售、产品、财务、法务等角色工作流封装为可定制的技能、命令与连接器。",
+      "try_it": [
+        "先按团队角色和最高频任务映射可用插件，选出一个小范围试点场景。",
+        "对照 README 的插件结构，检查技能说明和显式命令是否覆盖真实流程中的关键步骤。",
+        "用公司术语、审批节点和输出模板改写技能内容，观察输出一致性是否提升。",
+        "在接入第三方连接器前，先梳理所需数据范围、权限和日志留存要求。",
+        "将试点中的通用流程沉淀为新插件或可复用技能，并记录人工复核点。"
+      ],
+      "url": "https://github.com/anthropics/knowledge-work-plugins",
+      "why": "其产品启发可能在于把角色化最佳实践、工具连接和显式操作入口打包成可复用插件，并以市场式分发降低团队配置门槛；工程上 README 显示结构文件化、无需构建，便于审阅与二次定制。实际效果与生产成熟度仍需验证。"
+    },
+    {
+      "audience": "使用 Claude Code、Cursor、Codex CLI 等编码代理的前端开发者、产品设计师，以及希望统一界面质量门禁的工程团队。",
+      "category": "engineering",
+      "claims": [
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "仓库元数据标注许可证为 Apache-2.0。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 将项目描述为编码代理的设计词汇，提供调整、评审、收尾、实时迭代和规划等命令。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明检测器包含 62 条确定性规则，且不需要 LLM 或 API key。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 列出对 Claude Code、Cursor、Codex CLI、GitHub Copilot 等多种编码工具的支持。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明 CLI 可在终端或 CI 中扫描目录与渲染页面，并输出 JSON 或 GitHub Actions 注解。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明 live 模式连接本地开发服务器，选中元素后可热替换变体并写回源代码。"
+        }
+      ],
+      "full_name": "pbakaus/impeccable",
+      "license_spdx": "Apache-2.0",
+      "limitations": [
+        "README 明确 live 模式仅用于本地检出，不应注入已部署站点或为它削弱生产 CSP。",
+        "检测器对 JSX、TSX 等源文件只运行模式规则，依赖渲染页面的规则需要扫描 URL。",
+        "README 说明钩子可能在模型批准之外运行，首次编辑可能触发引擎下载，无人值守前应审查钩子配置。",
+        "部分工具需要额外的钩子授权或信任步骤，安装后还要重载工具。",
+        "输入未提供独立基准或误报率数据，62 条规则的实际检出质量与团队适配度需要自行验证。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1097346685,
+      "sources": [
+        {
+          "excerpt": "pbakaus/impeccable The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
+          "id": "metadata",
+          "url": "https://github.com/pbakaus/impeccable"
+        },
+        {
+          "excerpt": "Inter for everything. Purple-to-blue gradients. Cards nested in cards, gray text on colored backgrounds, a rounded-square icon tile above every heading. Ask an agent for a page with no other guidance and these show up again and again, across models and projects.",
+          "id": "readme",
+          "url": "https://github.com/pbakaus/impeccable/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-10-29T07:11:29.069144Z",
+        "stars_total": 93516
+      },
+      "summary": "面向编码代理的界面设计命令集与规则检测器，用于指导界面改版、评审可用性并拦截常见的 AI 生成界面问题。",
+      "try_it": [
+        "先在一个已有页面的独立组件上试用评审，观察它给出的改进优先级是否具体可执行。",
+        "用团队现有设计规范检查生成建议是否保持品牌一致，而不是只追求视觉变化。",
+        "在本地开发页面上对比几个界面变体，重点确认写回源代码的改动是否可控、可回滚。",
+        "在 CI 中先启用少量规则试跑，记录误报与阻断情况，再决定是否扩大规则范围。",
+        "把项目目标、目标用户和约束整理成上下文文件，再让代理据此提出改版方向。"
+      ],
+      "url": "https://github.com/pbakaus/impeccable",
+      "why": "它把模糊的设计要求拆成可命名的操作，并配套确定性规则检测、可用性评审和本地实时迭代；价值在于把设计反馈前置到编码代理的工作流中，可能减少多人协作中反复口头拉扯和界面同质化。其效果依赖代理与项目上下文，实际收益仍需项目内验证。"
+    },
+    {
+      "audience": "需要理解大型代码库的开发者、架构师、AI 编程助手用户和技术文档维护者。",
+      "category": "engineering",
+      "claims": [
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "元数据描述该项目把代码库及其文档、SQL schema、配置和 PDF 转成可查询知识图谱。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明代码解析使用 tree-sitter AST，过程确定、无需 LLM，并且代码不会离开本机。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明每条边会标注为 EXTRACTED 或 INFERRED，以区分源中显式关系与 Graphify 推断关系。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 列出 LOCOMO、LongMemEval-S 等基准结果，并声称图构建消耗 0 个 LLM credits。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "元数据标明许可证为 Apache-2.0。"
+        }
+      ],
+      "full_name": "Graphify-Labs/graphify",
+      "license_spdx": "Apache-2.0",
+      "limitations": [
+        "README 中的基准分数、80% token 节省和“正式验证”等属于项目方表述，本次未独立复现。",
+        "文档、PDF、图像和视频的语义处理可能调用助手模型或配置的 API key，需评估数据外发与权限边界。",
+        "PDF、Office、视频、MCP、图数据库等能力依赖可选组件或外部服务，实际可用范围受安装选项影响。",
+        "项目同时推广 Graphify Cloud，开源核心与商业云服务的能力边界需进一步核对。",
+        "仅凭 README 和元数据无法验证多语言解析覆盖、跨平台兼容性和长期维护活跃度。",
+        "元数据星标数很高，但星标数不能替代代码审查或运行验证。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1200597263,
+      "sources": [
+        {
+          "excerpt": "Graphify-Labs/graphify Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+          "id": "metadata",
+          "url": "https://github.com/Graphify-Labs/graphify"
+        },
+        {
+          "excerpt": "Code is parsed with tree-sitter AST: deterministic, no LLM, nothing leaves your machine. (Docs, PDFs, images and video use your assistant's model, or a configured API key, for a semantic pass.)",
+          "id": "readme",
+          "url": "https://github.com/Graphify-Labs/graphify/blob/v8/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-10-29T07:11:29.069144Z",
+        "stars_total": 138084
+      },
+      "summary": "Graphify 是一个面向 AI 编程助手的代码知识图谱工具，用 tree-sitter 解析代码并生成可查询、可追溯的图结构。",
+      "try_it": [
+        "选一个中小型 Python 项目构建图谱，将 graph.html 中的高连接节点与人工架构图对照，判断“上帝节点”是否有解释力。",
+        "针对一个跨文件调用链，比较图谱查询与直接全文检索的定位效率，并检查 EXTRACTED/INFERRED 标记是否可追溯。",
+        "在含 README、设计文档和 PDF 的混合仓库中试用，重点观察语义解析是否会触发外部模型调用及数据外发范围。",
+        "把它接入现有 AI 编程助手工作流，记录一次真实排障中减少重复读取文件的程度，而不是只看宣传指标。"
+      ],
+      "url": "https://github.com/Graphify-Labs/graphify",
+      "why": "它把跨文件调用、导入和继承关系整理为可遍历图谱，并用 EXTRACTED/INFERRED 标记帮助区分直接读取与推断，可能降低大型仓库中的检索和架构理解成本；本地 AST 解析的设计对隐私敏感团队有吸引力。"
+    },
+    {
+      "audience": "使用 Claude Code、Codex 或 MCP 的开发者、AI 工程团队，以及需要多代理工作流和记忆/RAG 集成的研究者。",
+      "category": "engineering",
+      "claims": [
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "仓库描述将其定位为面向 Claude Code、Codex 等客户端的 agent harness，并列出多代理 swarm、记忆、联邦和向量 RAG 集成。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 将 Ruflo 描述为 Claude Code 和 Codex 周围的执行层，加入 100+ 专用代理、协同 swarm、自学习记忆和联邦通信。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "metadata 显示许可证 SPDX 为 MIT，stars_total 为 80026。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明 Claude Code 插件路径需要 Claude Code 2.1.287 或更高版本。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 提示 mods 以用户账户权限运行、未沙箱化，安装前应审阅代码。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 对比 Claude Code 插件与 CLI 安装：前者写入工作区文件为零、hooks 不安装，后者包含 98 agents、60+ commands、30 skills、MCP server、hooks 和 daemon。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明本地向量检索和对比更新可在没有 LLM 的情况下运行，但仍需要嵌入和配置的学习模块。"
+        }
+      ],
+      "full_name": "ruvnet/ruflo",
+      "license_spdx": "MIT",
+      "limitations": [
+        "README 把安装路径分为 Claude Code 插件与 CLI 两套，功能面、写入文件和 hooks 行为不同，选型成本较高。",
+        "README 明确提示 mods 会以用户账户权限运行且未沙箱化，安装前需要审阅代码。",
+        "Claude Code 插件路径要求 2.1.287 或更高版本，存在宿主版本约束。",
+        "README 说明本地向量检索和对比学习可不用 LLM，但仍需要嵌入和配置的学习模块，并非完全零配置。",
+        "README 列出 98 个 agents、60+ 命令、30 个 skills、314 个 MCP tools 等大量能力，可能带来较高的学习和治理复杂度。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 995029641,
+      "sources": [
+        {
+          "excerpt": "ruvnet/ruflo 🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
+          "id": "metadata",
+          "url": "https://github.com/ruvnet/ruflo"
+        },
+        {
+          "excerpt": "A harness is the workbench around the model: it organizes tasks, carries context between steps and helps check results.",
+          "id": "readme",
+          "url": "https://github.com/ruvnet/ruflo/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-10-29T07:11:29.069144Z",
+        "stars_total": 80026
+      },
+      "summary": "面向 Claude Code 与 Codex 的智能体元框架，提供多代理协同、记忆、MCP 工具与可视化控制台。",
+      "try_it": [
+        "先以只读并需确认的权限试用核心插件，观察其任务路由与记忆行为，不直接授予写权限。",
+        "在一个低风险的小型代码任务上，对比启用与未启用 Ruflo 时的任务拆分、上下文保持和结果审查差异。",
+        "在隔离项目中评估其 MCP 工具暴露面和插件权限，记录哪些操作需要人工确认。",
+        "若关注知识管理，可测试跨会话记忆和 RAG 检索在代码库问答中的可追溯性与准确性。"
+      ],
+      "url": "https://github.com/ruvnet/ruflo",
+      "why": "它将模型周边的工具、记忆、循环和沙箱控制抽象为可插拔编排层，并用插件覆盖多代理、RAG、安全与可观测性；对需要把 Claude Code/Codex 扩展成团队式工作流的开发者有较高参考价值，可能减少自行拼接组件的成本。metadata 显示其公开关注度很高，MIT 许可也在输入中可确认。"
+    },
+    {
+      "audience": "前端工程师、设计工程师、设计系统维护者，以及使用代理辅助开发并需要界面评审清单的产品团队。",
+      "category": "engineering",
+      "claims": [
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 描述该仓库是一组帮助构建界面的 agent skills，覆盖 UI、排版、颜色、无障碍、布局和产品写作。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "输入元数据标明仓库许可证为 MIT。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "输入元数据标明仓库共有 9053 stars。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 列出 better-interface、better-ui、better-typography、better-colors、better-accessibility、better-layout、better-writing 等技能。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 将 interface-review 描述为审查分支、拉取请求或未提交变更所引入或回归的界面问题。"
+        }
+      ],
+      "full_name": "jakubkrehel/skills",
+      "license_spdx": "MIT",
+      "limitations": [
+        "未提供独立基准测试、用户研究或对照实验来证明这些技能能稳定提升界面质量。",
+        "技能效果可能取决于具体代理运行时、模型能力和项目上下文，README 未说明兼容范围与版本要求。",
+        "README 以功能列表和宣传性描述为主，实际规则强度与边界需逐项查阅各 SKILL.md。",
+        "未说明维护频率、问题响应机制或长期路线图，持续可用性可能受个人维护节奏影响。",
+        "安装与插件接入依赖外部 skills 工具链，未在输入中验证其跨环境可靠性。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1296300799,
+      "sources": [
+        {
+          "excerpt": "jakubkrehel/skills A collection of agent skills that help you build great interfaces.",
+          "id": "metadata",
+          "url": "https://github.com/jakubkrehel/skills"
+        },
+        {
+          "excerpt": "A collection of agent skills that cover UI, typography, colors, accessibility, layout, product writing and help you build a great interface.",
+          "id": "readme",
+          "url": "https://github.com/jakubkrehel/skills/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-10-29T07:11:29.069144Z",
+        "stars_total": 9053
+      },
+      "summary": "一组面向 AI 代理的界面构建技能合集，覆盖无障碍、布局、产品写作、排版、颜色与 UI 打磨。",
+      "try_it": [
+        "先阅读 better-accessibility 的 SKILL.md，并人工挑选一个页面按其检查项做一次无障碍走查。",
+        "选取一个小型界面变更，用 interface-review 的报告结构组织一次代码评审，比较其覆盖维度与团队现有清单的差异。",
+        "在现有设计系统中试用 better-colors 的语义命名与对比度检查思路，人工核对色板是否更一致。",
+        "用 better-interface 的排序报告框架评审一个已有流程，记录哪些建议可直接落地、哪些需要结合业务判断。"
+      ],
+      "url": "https://github.com/jakubkrehel/skills",
+      "why": "README 显示这些技能把界面审查、组件状态枚举、设计稿还原和变更回归检查拆成可调用的工作流，可能帮助前端与设计工程团队在开发、评审和迭代中更系统地覆盖 UI 质量维度；其价值主要在工程流程嵌入与检查项复用，而非已被独立验证的自动化效果。"
+    }
+  ],
+  "scheduled_for": "2026-10-29",
+  "schema_version": 1,
+  "summary": "从公开资料中精选 6 个值得进一步了解的项目，附适用场景、限制和原始证据。",
+  "title": "开源周刊 · 2026-10-29"
+}

@@ -1,0 +1,440 @@
+{
+  "baseline_note": "本期为定时榜单快照；采集时间如上。未建立可比历史基线的项目不作增长判断。",
+  "edition": "weekly",
+  "id": "weekly-2026-11-05",
+  "observed_at": "2026-11-05T07:56:58.208578Z",
+  "projects": [
+    {
+      "audience": "经常使用 Claude Code、Codex、OpenCode 等编码代理进行长周期开发，希望保留项目决策、缺陷修复和操作上下文的开发者与团队。",
+      "category": "engineering",
+      "claims": [
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "项目定位是为编码代理提供跨会话持久上下文，自动捕获工具使用观测并生成语义摘要。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明其通过生命周期钩子、Worker 服务、SQLite 数据库和 Chroma 向量数据库等组件工作。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 提供 search、timeline、get_observations 等 MCP 搜索工具，并采用分层检索流程。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 声称分层检索可带来约 10 倍 token 节省。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "系统要求 Node.js 20.0.0 或更高，并可能需要 Bun、uv、SQLite 等依赖。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "仓库元数据标注许可证为 Apache-2.0。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "仓库描述称其可与 Claude Code、OpenClaw、Codex、Gemini、Hermes、Copilot、OpenCode 等配合使用。"
+        }
+      ],
+      "full_name": "thedotmack/claude-mem",
+      "license_spdx": "Apache-2.0",
+      "limitations": [
+        "本次评估仅依据仓库元数据与 README，未实际安装、运行，也未进行性能或安全测试。",
+        "依赖 Node.js 20.0.0 或更高版本，并涉及 Bun、uv、SQLite 等组件，可能提高本地环境维护成本。",
+        "安装流程默认引导登录 claude-mem，并涉及托管记忆、云同步等可选服务，数据存放位置与隐私策略需自行确认。",
+        "README 提到截图功能默认关闭，但启用后可能保存并上传媒体文件，需检查相关开关与权限。",
+        "分层检索可节省约 10 倍 token 是项目自述，本次评估未独立复现。",
+        "较高的星标数不能替代对代码质量、维护活跃度和安全性的独立审查。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1048065319,
+      "sources": [
+        {
+          "excerpt": "thedotmack/claude-mem Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+          "id": "metadata",
+          "url": "https://github.com/thedotmack/claude-mem"
+        },
+        {
+          "excerpt": "Claude-Mem seamlessly preserves context across sessions by automatically capturing tool usage observations, generating semantic summaries, and making them available to future sessions. This enables Claude to maintain continuity of knowledge about projects even after sessions end or reconnect.",
+          "id": "readme",
+          "url": "https://github.com/thedotmack/claude-mem/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-11-05T07:56:58.208578Z",
+        "stars_total": 113128
+      },
+      "summary": "面向 Claude Code 等编码代理的持久记忆层，自动记录会话中的工具观测、生成摘要，并在后续会话注入相关上下文。",
+      "try_it": [
+        "先在非关键的小型项目或单独工作区试用，观察自动生成的记忆是否准确、是否包含不必要的内容。",
+        "检查上下文注入范围、观察数量上限和敏感信息排除方式，避免把凭证或私密讨论写入记忆。",
+        "用一次跨会话的缺陷排查验证效果：结束会话后重新打开，检索此前的决策、尝试和修复记录。",
+        "若考虑团队共享，先明确哪些记忆可共享、哪些保留在个人工作区，并确认数据实际存放在哪里。",
+        "评估托管记忆、云同步和试用到期后的回退行为，再决定是否长期使用。"
+      ],
+      "url": "https://github.com/thedotmack/claude-mem",
+      "why": "它针对编码代理常见的跨会话上下文丢失问题，提供自动捕获、压缩、检索与注入的一体化流程；README 还给出分层检索以减少 token 消耗的思路，对长期项目协作和代理工程实践有参考价值。其实际稳定性、检索质量和隐私边界仍需独立验证，团队采用前应重点评估。"
+    },
+    {
+      "audience": "产品设计、设计工程与前端团队，以及希望用代理辅助界面审查的独立开发者。",
+      "category": "product",
+      "claims": [
+        {
+          "evidence_ids": [
+            "metadata",
+            "readme"
+          ],
+          "text": "仓库描述为帮助构建优秀界面的代理技能集合，README 列出 better-interface、better-ui、better-typography、better-colors、better-accessibility、better-layout 和 better-writing 等技能。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明 better-accessibility 会依据 WCAG 2.2 审查并修复键盘与焦点行为、ARIA、可访问名称、表单、屏幕阅读器播报、动效和缩放。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "仓库采用 MIT 许可证，GitHub 星标总数为 10871。"
+        }
+      ],
+      "full_name": "jakubkrehel/skills",
+      "license_spdx": "MIT",
+      "limitations": [
+        "这些技能主要是面向代理的说明与工作流，并非可独立运行的软件，实际效果可能取决于所用代理、模型和上下文。",
+        "README 未提供量化基准或效果验证，不能据此判断审查或生成质量。",
+        "部分技能需要用户主动调用，另一些可能依赖项目已有的设计令牌、组件、截图或可访问的页面环境。",
+        "许可证为 MIT，但未评估具体使用场景下的法律适用性。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1296300799,
+      "sources": [
+        {
+          "excerpt": "jakubkrehel/skills A collection of agent skills that help you build great interfaces.",
+          "id": "metadata",
+          "url": "https://github.com/jakubkrehel/skills"
+        },
+        {
+          "excerpt": "A collection of agent skills that cover UI, typography, colors, accessibility, layout, product writing and help you build a great interface.",
+          "id": "readme",
+          "url": "https://github.com/jakubkrehel/skills/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-11-05T07:56:58.208578Z",
+        "stars_total": 10871
+      },
+      "summary": "一套面向代理的界面构建技能集，覆盖无障碍、布局、文案、字体、颜色与 UI 打磨。",
+      "try_it": [
+        "用 better-interface 对现有产品的一个完整流程做设计审查，并按报告优先级逐项改进。",
+        "用 better-accessibility 检查键盘焦点、表单、可访问名称与屏幕阅读器提示，形成修复清单。",
+        "用 better-typography 和 better-colors 统一字体层级、语义色令牌与对比度。",
+        "在合并前用 interface-review 检查分支或拉取请求引入的界面回归。"
+      ],
+      "url": "https://github.com/jakubkrehel/skills",
+      "why": "它把界面审查和优化拆成可复用的技能，覆盖从设计评审到实现细节的多个环节，适合把设计工程经验沉淀为可重复的工作流；可能帮助团队在评审和开发阶段更早发现一致性、可用性与无障碍问题。"
+    },
+    {
+      "audience": "希望把编码代理纳入可审查工作流的开发者、技术负责人，以及研究 IDE 与代理工具设计的人。",
+      "category": "engineering",
+      "claims": [
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "元数据记录该仓库属于 JetBrains，许可证为 Apache-2.0，约有 7,678 个 stars。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 称 ThinkRail 将任意 git 仓库作为项目，并从中切出各自带分支和工作目录的 git worktree 工作区，让代理并行工作而不触碰用户检出。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 称应用围绕 pi 编码代理构建，并提供 Monaco 编辑器标签页、文件树、终端和文档等可分割工作台。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明 SPEC.md 文件图位于代码旁，代理通过专用工具读取、搜索和维护它，以保留跨会话的项目意图。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 称用户可用 JetBrains AI 登录，或通过 pi 自身的认证接入其他模型提供商，ThinkRail 没有自己的账户体系。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明错误报告始终发送，而额外产品使用数据仅在用户开启共享时发送，并提供关闭额外共享的启动选项。"
+        }
+      ],
+      "full_name": "JetBrains/thinkrail",
+      "license_spdx": "Apache-2.0",
+      "limitations": [
+        "实际稳定性、性能与跨平台体验未在本次评估中验证。",
+        "README 说明桌面版对系统依赖有要求，例如 Linux 需要 glibc 2.38+ 及 GTK、WebKitGTK 等组件。",
+        "README 说明部分构建产物签名状态不同：Linux 产物未签名，macOS CLI 已签名但尚未公证。",
+        "README 说明错误报告始终发送，应用也会收集基础使用事件，重视遥测的用户需评估。",
+        "需要本机安装 git 并配置模型提供商，首次使用存在准备成本。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1293238217,
+      "sources": [
+        {
+          "excerpt": "JetBrains/thinkrail Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
+          "id": "metadata",
+          "url": "https://github.com/JetBrains/thinkrail"
+        },
+        {
+          "excerpt": "ThinkRail is a thin host that runs `pi` in-process and bridges it to a rich web UI. `pi` owns models, skills, compaction, cost, and session state; the app owns the workspace, the editor, and the wire — it never assembles prompts behind your back.",
+          "id": "readme",
+          "url": "https://github.com/JetBrains/thinkrail/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-11-05T07:56:58.208578Z",
+        "stars_total": 7678
+      },
+      "summary": "JetBrains 开源的 ThinkRail 是一个围绕 pi 编码代理构建、以隔离工作区和 SPEC.md 规格图组织协作的 agentic IDE。",
+      "try_it": [
+        "先阅读 goal-and-requirements.md 和 architecture.md，理解产品边界与引擎、协议、UI 的分层。",
+        "在测试仓库中创建独立工作区，让代理完成一个小改动，再检查分支隔离与合并流程。",
+        "试用 SPEC.md 规格图和技能工作流，观察代理能否在会话结束后保留项目意图。",
+        "比较多个并行代理会话与单一终端代理的交互差异，重点看计划步骤、审查评论和失败检查处理。",
+        "评估隐私设置、模型提供商接入与自定义服务器能力，再决定是否用于真实项目。"
+      ],
+      "url": "https://github.com/JetBrains/thinkrail",
+      "why": "它把代理会话、git worktree 隔离、编辑器与终端、PR 状态和可维护规格放在同一工作台，可能为需要并行代理与可审查交付的团队提供产品与工程参考；实际体验仍需自行验证。"
+    },
+    {
+      "audience": "终端重度用户、开发者工具产品团队、需要嵌入终端能力的应用开发者",
+      "category": "engineering",
+      "claims": [
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "元数据列出 Ghostty 的许可证为 MIT。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 称 Ghostty 提供快速、功能丰富且原生三项特性。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 称 libghostty-vt 已可用于 Zig 和 C，并兼容 macOS、Linux、Windows 和 WebAssembly。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 称 libghostty-vt 的功能稳定，但 API 签名仍在变化。"
+        }
+      ],
+      "full_name": "ghostty-org/ghostty",
+      "license_spdx": "MIT",
+      "limitations": [
+        "README 详述的独立桌面应用主要覆盖 macOS 与 Linux（GTK），其他平台的桌面体验需另行核对。",
+        "libghostty-vt 虽已可用，但 README 明确说明其 API 签名仍可能变动。",
+        "项目规模较大，构建与贡献门槛可能较高，需结合官方开发文档评估。",
+        "README 中的性能对比属于项目自述，未在本次输入中提供可复现基准。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 475553026,
+      "sources": [
+        {
+          "excerpt": "ghostty-org/ghostty 👻 Ghostty is a fast, feature-rich, and cross-platform terminal emulator that uses platform-native UI and GPU acceleration.",
+          "id": "metadata",
+          "url": "https://github.com/ghostty-org/ghostty"
+        },
+        {
+          "excerpt": "Ghostty is a terminal emulator that differentiates itself by being fast, feature-rich, and native. While there are many excellent terminal emulators available, they all force you to choose between speed, features, or native UIs. Ghostty provides all three.",
+          "id": "readme",
+          "url": "https://github.com/ghostty-org/ghostty/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-11-05T07:56:58.208578Z",
+        "stars_total": 63586
+      },
+      "summary": "Ghostty 是一款强调快速、功能丰富与平台原生体验的跨平台终端模拟器，并提供可嵌入的 libghostty 库。",
+      "try_it": [
+        "阅读官方文档，梳理终端功能、平台支持与配置方式。",
+        "在独立环境中试用，并与现有终端工作流比较日常开发体验。",
+        "查看 libghostty 的 C 或 Zig 示例，评估嵌入自有应用的可行性。",
+        "关注 libghostty-vt 的 API 变动与版本标签，规划集成风险。"
+      ],
+      "url": "https://github.com/ghostty-org/ghostty",
+      "why": "其把性能、功能与原生 UI 作为差异化方向，可能为开发者工具产品设计提供启发；README 还描述了多线程架构、GPU 渲染和 libghostty 嵌入路径，对工程实现有参考价值。实际性能与稳定性仍需独立验证。"
+    },
+    {
+      "audience": "使用 Claude Code、Cursor 等编码代理的开发者、技术负责人和代码审查者。",
+      "category": "engineering",
+      "claims": [
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 将该文件描述为受 Andrej Karpathy 对 LLM 编码陷阱的观察启发，用四条原则改善 Claude Code 行为。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 列出的四项原则是 Think Before Coding、Simplicity First、Surgical Changes 和 Goal-Driven Execution。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "元数据记录 stars_total 为 229614，描述称其为单个 CLAUDE.md 文件。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "元数据的 license_spdx 为 null。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明可通过 Claude Code 插件或项目 CLAUDE.md 使用，并包含 Cursor 项目规则。"
+        }
+      ],
+      "full_name": "multica-ai/andrej-karpathy-skills",
+      "license_spdx": null,
+      "limitations": [
+        "元数据未提供 SPDX 许可证标识；README 文本虽提到 MIT，但输入未以 SPDX 字段确认，不应据此推断法律适用性。",
+        "本质是提示词/规则文件，效果依赖模型、项目语境和执行方式，README 未提供可验证的量化评测。",
+        "规则偏向谨慎，可能增加简单任务的沟通与验证开销。",
+        "仓库热度数据很高，但输入未说明 star 统计口径与真实性，不能等同于广泛生产验证。",
+        "README 中的安装示例指向 forrestchang 仓库，与本仓库 full_name 不一致，可能造成来源混淆。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1142983825,
+      "sources": [
+        {
+          "excerpt": "multica-ai/andrej-karpathy-skills A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+          "id": "metadata",
+          "url": "https://github.com/multica-ai/andrej-karpathy-skills"
+        },
+        {
+          "excerpt": "The models make wrong assumptions on your behalf and just run along with them without checking. They don't manage their confusion, don't seek clarifications, don't surface inconsistencies, don't present tradeoffs, don't push back when they should.",
+          "id": "readme",
+          "url": "https://github.com/multica-ai/andrej-karpathy-skills/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-11-05T07:56:58.208578Z",
+        "stars_total": 229614
+      },
+      "summary": "一个受 Andrej Karpathy 观察启发的 CLAUDE.md 指南，用四条原则约束 Claude Code 的编码行为。",
+      "try_it": [
+        "先在一个小型重构或缺陷修复任务中试用，观察是否减少无关改动。",
+        "把四条原则与团队现有代码规范、测试要求合并，形成项目级检查清单。",
+        "在代码审查时对照“每行改动是否可追溯到需求”和“是否有过度抽象”做复盘。",
+        "对简单任务保留判断，不必机械执行完整流程。",
+        "若使用 Cursor，可参考 README 所述项目规则方式同步同一套准则。"
+      ],
+      "url": "https://github.com/multica-ai/andrej-karpathy-skills",
+      "why": "它把 LLM 编码中常见的错误假设、过度抽象、越界修改和缺乏验证等问题转化为可操作的提示规则，可能帮助开发者减少返工和审查摩擦；价值主要在于流程约束而非工具运行时能力。"
+    },
+    {
+      "audience": "Linux 桌面用户、Wayland 合成器开发者、桌面环境与窗口管理研究者",
+      "category": "engineering",
+      "claims": [
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "仓库元数据标注 Hyprland 为 BSD-3-Clause 许可证。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 将 Hyprland 描述为 100% 独立、动态平铺且注重视觉效果的 Wayland 合成器。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 列出渐变边框、多种模糊、动画、发光、阴影、插件支持与套接字 IPC 等特性。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "仓库元数据显示其总星标数约为 4 万。"
+        }
+      ],
+      "full_name": "hyprwm/Hyprland",
+      "license_spdx": "BSD-3-Clause",
+      "limitations": [
+        "主要面向 Wayland 桌面环境，现有 X11 工作流与硬件兼容性需自行验证",
+        "README 未提供性能基准、稳定性承诺或商业支持说明",
+        "高度可定制与插件生态可能增加配置和维护成本",
+        "仅依据给定 README，无法判断具体发行版或显卡的适配情况",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 470730648,
+      "sources": [
+        {
+          "excerpt": "hyprwm/Hyprland Hyprland is an independent, highly customizable, dynamic tiling Wayland compositor that doesn't sacrifice on its looks.",
+          "id": "metadata",
+          "url": "https://github.com/hyprwm/Hyprland"
+        },
+        {
+          "excerpt": "Hyprland is a 100% independent, dynamic tiling Wayland compositor that doesn't sacrifice on its looks. It provides the latest Wayland features, is highly customizable, has all the eyecandy, the most powerful plugins, easy IPC, much more QoL stuff than other compositors and more...",
+          "id": "readme",
+          "url": "https://github.com/hyprwm/Hyprland/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-11-05T07:56:58.208578Z",
+        "stars_total": 40319
+      },
+      "summary": "Hyprland 是一个独立、可高度定制且注重视觉效果的动态平铺 Wayland 合成器。",
+      "try_it": [
+        "先阅读官方安装与快速开始文档，确认当前系统与硬件是否满足 Wayland 使用条件",
+        "在可回退的测试环境中体验默认配置，再逐步调整快捷键、布局和视觉效果",
+        "用简单的日常任务对比其工作流与现有桌面环境的差异",
+        "若考虑长期使用，关注版本更新、插件兼容性与配置备份策略"
+      ],
+      "url": "https://github.com/hyprwm/Hyprland",
+      "why": "它把动态平铺、动画与模糊等视觉特性、插件机制和 IPC 集中在一个活跃开发的开源合成器中，对桌面环境与窗口管理研究有较高参考价值；其配置和插件设计也可能为桌面产品提供启发。"
+    }
+  ],
+  "scheduled_for": "2026-11-05",
+  "schema_version": 1,
+  "summary": "从公开资料中精选 6 个值得进一步了解的项目，附适用场景、限制和原始证据。",
+  "title": "开源周刊 · 2026-11-05"
+}

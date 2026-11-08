@@ -1,0 +1,86 @@
+{
+  "baseline_note": "本期为定时榜单快照；采集时间如上。未建立可比历史基线的项目不作增长判断。",
+  "edition": "monthly",
+  "id": "monthly-2026-11-08",
+  "observed_at": "2026-11-08T07:27:09.461687Z",
+  "projects": [
+    {
+      "audience": "使用 Claude Code、Cursor、Codex 等编码代理的前端/全栈开发者、设计工程师和需要做界面质量把关的产品团队。",
+      "category": "product",
+      "claims": [
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "仓库采用 Apache-2.0 许可证。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 介绍其为编码代理提供设计词汇，并可通过 critique、audit 等命令审查界面。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 称检测器包含 62 条确定性规则，不需要 LLM 或 API key。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 列出 24 个命令，覆盖设计调整、审查、收尾、实时迭代和项目设置。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明检测器可在代理、终端/CI 和浏览器三种方式下运行。"
+        }
+      ],
+      "full_name": "pbakaus/impeccable",
+      "license_spdx": "Apache-2.0",
+      "limitations": [
+        "Live 模式的 Apply 在无聊天代理轮询时可能调用本机 codex 或 claude，并关闭审批、权限检查和沙箱、继承环境变量，需只在可信仓库中谨慎使用。",
+        "安装的命令钩子可能在模型审批之外运行，首次编辑可触发引擎下载；无人值守运行前应审查钩子配置。",
+        "关闭 Telemetry 只停止匿名使用记录，README 说明新设计开始时仍会请求 impeccable.style 的视觉方向目录。",
+        "对 JSX/TSX 等源代码主要运行模式规则，低对比度、小字号等依赖渲染页面的规则需要扫描 URL 才能覆盖。",
+        "README 中的前后效果对比、规则有效性和命令价值主要是项目自述，未见独立基准或实测数据。",
+        "需要编码代理或 Node/npx 等环境；手动复制安装会跳过设计钩子和子代理。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1097346685,
+      "sources": [
+        {
+          "excerpt": "pbakaus/impeccable The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
+          "id": "metadata",
+          "url": "https://github.com/pbakaus/impeccable"
+        },
+        {
+          "excerpt": "Impeccable is strongest on interfaces that already exist: point it at a page or a component and iterate.",
+          "id": "readme",
+          "url": "https://github.com/pbakaus/impeccable/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-11-08T07:27:09.461687Z",
+        "stars_total": 105727
+      },
+      "summary": "面向编码代理的界面设计指令集，用 critique/audit 审查界面，并用 polish/bolder 等词控制设计方向，附带确定性规则检测器和浏览器叠加审查。",
+      "try_it": [
+        "先选一个已有组件做 critique，检查评分和修复优先级是否比团队现有评审更可操作。",
+        "对现有页面做一次 audit，人工复核 P0/P1 发现，并记录误报和漏报。",
+        "把检测器的机器可读输出接入 CI，观察 62 条规则在真实代码库中的稳定性。",
+        "在可信的本地分支试用 live 模式，先确认 copy Apply 的代理调用和脚本执行风险。",
+        "用 document 生成 DESIGN.md 后，验证它能否约束后续代理改动并保持品牌一致。"
+      ],
+      "url": "https://github.com/pbakaus/impeccable",
+      "why": "它把“让页面更好看”这类模糊要求拆成可命名的设计动作与分级审查流程，可能帮助团队在代理生成界面时更早发现可用性、无障碍和视觉套路问题；检测器可在终端、CI 或浏览器中独立运行，便于把设计检查纳入工程流程。"
+    }
+  ],
+  "scheduled_for": "2026-11-08",
+  "schema_version": 1,
+  "summary": "从公开资料中精选 1 个值得进一步了解的项目，附适用场景、限制和原始证据。",
+  "title": "Monthly 深度精选 · 2026-11-08"
+}

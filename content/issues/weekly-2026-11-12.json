@@ -1,0 +1,431 @@
+{
+  "baseline_note": "本期为定时榜单快照；采集时间如上。未建立可比历史基线的项目不作增长判断。",
+  "edition": "weekly",
+  "id": "weekly-2026-11-12",
+  "observed_at": "2026-11-12T08:24:20.271685Z",
+  "projects": [
+    {
+      "audience": "AI 应用开发者、Agent 工作流设计者、提示词与技能封装研究者，以及希望把组织流程转化为可复用能力的产品团队。",
+      "category": "engineering",
+      "claims": [
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "该仓库是 Anthropic 面向 Claude 的 Agent Skills 公开仓库，README 称其包含技能示例、Agent Skills 规范与技能模板。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 将技能定义为按需加载的指令、脚本和资源文件夹，用于让 Claude 以可重复方式完成特定任务。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明仓库包含 docx、pdf、pptx 和 xlsx 文档创建与编辑技能，并称这些技能为 Apache 2.0 开源。"
+        },
+        {
+          "evidence_ids": [
+            "metadata",
+            "readme"
+          ],
+          "text": "元数据未提供 SPDX 许可证标识，README 仅称许多技能以及文档技能采用 Apache 2.0。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 声明这些技能仅供演示和教育目的，Claude 实际实现与行为可能不同。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 提供 spec 和 template 目录，分别指向 Agent Skills 规范与技能模板。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "元数据显示该仓库 stars 总数为 193349。"
+        }
+      ],
+      "full_name": "anthropics/skills",
+      "license_spdx": null,
+      "limitations": [
+        "元数据未提供 SPDX 许可证标识，README 仅说明许多技能以及文档技能采用 Apache 2.0，复用前仍需逐项核对具体目录的许可与使用条件。",
+        "README 明确这些技能主要用于演示和教育，Claude 的实际实现与行为可能不同，不能据此推断生产可用性。",
+        "未提供统一的性能、安全或兼容性验证结果，技能质量与效果需在自有环境中用非敏感样例测试。",
+        "仓库覆盖多种技能类型，不同技能的成熟度、依赖和维护状态可能不一致，不宜整体视为单一稳定产品。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1061953414,
+      "sources": [
+        {
+          "excerpt": "anthropics/skills Public repository for Agent Skills",
+          "id": "metadata",
+          "url": "https://github.com/anthropics/skills"
+        },
+        {
+          "excerpt": "Skills are folders of instructions, scripts, and resources that Claude loads dynamically to improve performance on specialized tasks. Skills teach Claude how to complete specific tasks in a repeatable way, whether that's creating documents with your company's brand guidelines, analyzing data using your organization's specific workflows, or automating personal tasks.",
+          "id": "readme",
+          "url": "https://github.com/anthropics/skills/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-11-12T08:24:20.271685Z",
+        "stars_total": 193349
+      },
+      "summary": "Anthropic 公开的 Claude Agent Skills 示例仓库，汇集技能样例、规范、模板与文档处理技能，适合研究可复用 Agent 能力的封装方式。",
+      "try_it": [
+        "先阅读 README 中关于技能结构、仓库分区和使用场景的说明，建立整体地图。",
+        "从 skills 目录挑选一个文档处理技能，分析其 SKILL.md 如何描述触发条件、步骤与边界。",
+        "对照 spec 与 template，设计一个只覆盖单一日常任务的自定义技能草稿。",
+        "在隔离测试环境中用非敏感样例检查技能说明是否清晰、可复用，并记录失败场景与改进点。"
+      ],
+      "url": "https://github.com/anthropics/skills",
+      "why": "从 README 可见，该仓库把专业任务流程组织为可按需加载的 SKILL.md 说明、脚本和资源，既可能为 Agent 产品设计提供启发，也为工程落地提供规范、模板和复杂文档技能参考；元数据还显示其关注度很高，但实际效果与生产适用性仍需自行验证。"
+    },
+    {
+      "audience": "AI 代理开发者、浏览器自动化工程师、自动化测试与数据采集工具团队",
+      "category": "engineering",
+      "claims": [
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "项目是面向 AI 代理的浏览器自动化 CLI，输入元数据将其许可证标记为 Apache-2.0。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明 snapshot 会把页面返回为带 ref 的紧凑文本，代理可按 ref 操作并在操作后重新读取页面。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 列出 MCP 服务器、按版本分发的技能、多种浏览器引擎与云浏览器接入，以及 macOS、Linux、Windows 原生二进制。"
+        }
+      ],
+      "full_name": "vercel-labs/agent-browser",
+      "license_spdx": "Apache-2.0",
+      "limitations": [
+        "ref 在页面导航或 DOM 变化后失效，需要重新获取快照，长流程中会增加交互步骤。",
+        "默认浏览器为 Chrome for Testing，首次使用需下载浏览器，离线或受限网络环境下部署可能不便。",
+        "输入仅能确认许可证标记为 Apache-2.0，未提供对具体合规场景的进一步说明。",
+        "README 未给出成功率、延迟或稳定性基准，实际自动化效果可能随页面结构和反爬策略变化。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1132001614,
+      "sources": [
+        {
+          "excerpt": "vercel-labs/agent-browser Browser automation CLI for AI agents",
+          "id": "metadata",
+          "url": "https://github.com/vercel-labs/agent-browser"
+        },
+        {
+          "excerpt": "agent-browser is a native Rust CLI that gives an AI agent a browser it can drive one command at a time. `snapshot` returns the page as compact text with a ref such as `@e1` for each element. The agent acts on a ref, reads the page again to check the result, and repeats. The browser stays open between commands, so each step is one short shell call.",
+          "id": "readme",
+          "url": "https://github.com/vercel-labs/agent-browser/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-11-12T08:24:20.271685Z",
+        "stars_total": 50081
+      },
+      "summary": "面向 AI 代理的浏览器自动化 CLI，通过带引用的页面快照让代理逐步读取和操作网页。",
+      "try_it": [
+        "阅读 quick start 和命令分组，先用公开示例站点理解“打开页面、获取快照、按 ref 操作、复查结果”的闭环。",
+        "评估带 ref 的快照机制如何接入你的代理提示词与工具调用协议，并关注快照失效后的重试设计。",
+        "检查 MCP 服务器、技能分发和会话隔离能力是否匹配现有 AI 代理框架。",
+        "在受控环境中评估域名白名单、动作策略和内容边界等安全配置。"
+      ],
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "why": "它把浏览器操作拆成短小的命令行步骤，并用带 ref 的可访问性树快照帮助代理理解页面，可能降低网页代理的开发与调试成本；对构建网页代理、自动化测试和采集工具具有工程参考价值。"
+    },
+    {
+      "audience": "安全工程师、使用编码代理的研发团队、开源项目维护者，以及研究 AI 驱动安全审计流程的人员。",
+      "category": "engineering",
+      "claims": [
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 描述该技能按侦察、覆盖导向狩猎、候选验证、结构化输出、独立记录验证和目标中立报告六个阶段运行。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 要求编码代理支持工具调用和并行子代理，并需要 Node.js 与操作系统级强制沙箱。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "元数据标明仓库为 cloudflare/security-audit-skill，许可证为 MIT，并记录约 70605 stars。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明校验器用于 findings.json 和 coverage-ledger.json，并包含对应测试文件。"
+        }
+      ],
+      "full_name": "cloudflare/security-audit-skill",
+      "license_spdx": "MIT",
+      "limitations": [
+        "未在输入中提供实际审计效果、误报率或性能基准，无法据此确认检测质量。",
+        "需要支持工具调用和并行子代理的编码代理，普通聊天模型可能无法完整执行工作流。",
+        "需要 Node.js 来运行发现记录和覆盖账本的零依赖校验器。",
+        "README 要求使用操作系统级强制沙箱；缺少这些控制时，流程会保留 needs_validation 而不执行目标代码。",
+        "仓库星数仅来自元数据，不能单独作为质量或安全性的证据。",
+        "许可证信息仅依据输入中的 MIT 标识，不对其法律适用性作推断。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1273427276,
+      "sources": [
+        {
+          "excerpt": "cloudflare/security-audit-skill A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+          "id": "metadata",
+          "url": "https://github.com/cloudflare/security-audit-skill"
+        },
+        {
+          "excerpt": "The skill runs a structured audit in six phases:\n\n1. **Reconnaissance** -- map architecture, trust boundaries, input surfaces, prior evidence, and deterministic coverage in `architecture.md` and `coverage-ledger.json`.\n2. **Coverage-led hunting** -- assign isolated hunters from ledger units, record their checks, and use coverage critics to find gaps.\n3. **Candidate validation** -- give every unique candidate to a fresh verifier that tries to disprove it.\n4. **Structured output** -- write `confirmed`, `needs_validation`, and `rejected` records to `findings.json` and validate them against `report-schema.json`.",
+          "id": "readme",
+          "url": "https://github.com/cloudflare/security-audit-skill/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-11-12T08:24:20.271685Z",
+        "stars_total": 70605
+      },
+      "summary": "一个面向编码代理的多阶段安全审计技能，通过隔离代理完成侦察、狩猎、验证和机器可读报告生成。",
+      "try_it": [
+        "选择一个隔离的小型开源项目，按六阶段流程试跑并检查覆盖账本是否完整。",
+        "用已有审计结论构造对照样本，评估 confirmed、needs_validation 与 rejected 三类记录是否能被正确区分。",
+        "重点审阅 findings 校验器和覆盖账本校验器的测试用例，判断其对代理输出偏差的约束能力。",
+        "在受控沙箱中比较单次运行与多次运行的覆盖差异，记录新增发现和重复验证情况。",
+        "检查最终报告是否能从已验证记录和覆盖账本稳定生成，避免报告层引入未经验证的结论。"
+      ],
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "why": "它把安全审计拆成可编排的六阶段流程，强调由不同代理进行对抗式复核，并用 JSON Schema 与零依赖校验器约束输出，适合作为 AI 辅助代码审计的工程化参考。其价值主要来自流程设计与验证约束；实际漏洞发现效果仍需结合目标代码和独立评测判断。"
+    },
+    {
+      "audience": "使用 Claude Code、Codex、Copilot 等编码代理的软件工程师、技术负责人，以及希望规范代理工作流的小团队。",
+      "category": "engineering",
+      "claims": [
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "仓库描述为“Skills for Real Engineers. Straight from my .agents directory.”，定位是面向真实工程实践的代理技能集合。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明这些技能被设计为小型、易适配、可组合，并声称可与任何模型配合使用。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 列出工程类技能包括需求澄清、规格与工单拆解、TDD、缺陷诊断、代码审查和架构改进等。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 还列出生产力技能，如多轮访谈、交接文档、教学和问卷生成。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "仓库元数据标注许可证为 MIT，stars_total 为 322345。"
+        }
+      ],
+      "full_name": "mattpocock/skills",
+      "license_spdx": "MIT",
+      "limitations": [
+        "README 主要说明技能理念与集成方式，未提供可验证的量化效果或独立评测。",
+        "技能需要适配具体代理和仓库配置，且 README 提醒同时安装两种集成方式可能导致技能重复。",
+        "部分技能依赖问题跟踪器、标签和文档布局等前置设置，迁移到其他团队需要调整。",
+        "README 自述架构改进技能只是“调查”而非自动重构，不能替代人工设计判断。",
+        "许可证仅按输入标注为 MIT，输入未进一步说明第三方内容、商标或引用材料的授权边界。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1148788086,
+      "sources": [
+        {
+          "excerpt": "mattpocock/skills Skills for Real Engineers. Straight from my .agents directory.",
+          "id": "metadata",
+          "url": "https://github.com/mattpocock/skills"
+        },
+        {
+          "excerpt": "My agent skills that I use every day to do real engineering - not vibe coding. Developing real applications is hard. Approaches like GSD, BMAD, and Spec-Kit try to help by owning the process. But while doing so, they take away your control and make bugs in the process hard to resolve. These skills are designed to be small, easy to adapt, and composable. They work with any model. They're based on decades of engineering experience. Hack around with them. Make them your own. Enjoy.",
+          "id": "readme",
+          "url": "https://github.com/mattpocock/skills/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-11-12T08:24:20.271685Z",
+        "stars_total": 322345
+      },
+      "summary": "一套面向真实软件工程的可组合 AI 代理技能集，覆盖需求对齐、TDD、调试、代码审查、架构改进与工作流交接。",
+      "try_it": [
+        "先阅读 README 中的技能分类，挑选一个与当前痛点最接近的技能，例如需求澄清或 TDD，在小项目中试用。",
+        "在一个非关键仓库中记录使用前后的沟通轮次、返工点和代码审查发现，作为是否推广的依据。",
+        "为团队建立共享术语表和决策记录模板，观察代理输出是否更简洁、命名是否更一致。",
+        "把技能拆成可编辑的本地副本，逐条对照团队现有工程规范进行删改，而不是整包照搬。",
+        "安排一次回顾，评估技能对调试、测试和代码审查的实际帮助，并保留人工把关。"
+      ],
+      "url": "https://github.com/mattpocock/skills",
+      "why": "其价值在于把需求澄清、领域词汇、红绿重构、缺陷诊断和代码审查等工程实践拆成小而可改的代理技能，帮助团队减少对单一流程框架的依赖；这些是 README 中可验证的设计主张，实际效果可能因模型、仓库和团队习惯而异。"
+    },
+    {
+      "audience": "软件开发者、编辑器或 IDE 产品团队、关注协作编辑与性能工程的技术人员。",
+      "category": "engineering",
+      "claims": [
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "仓库元数据记录该仓库约有 94,758 个 stars。"
+        },
+        {
+          "evidence_ids": [
+            "metadata",
+            "readme"
+          ],
+          "text": "仓库描述称 Zed 是高性能、多人的代码编辑器，由 Atom 和 Tree-sitter 的创作者打造。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明 macOS、Linux 和 Windows 可直接下载或通过本地包管理器安装，其他平台尚未提供。"
+        },
+        {
+          "evidence_ids": [
+            "readme",
+            "metadata"
+          ],
+          "text": "README 说明源码主要采用 GPL-3.0-or-later，标注部分为 Apache-2.0；输入元数据中的许可证标识为 NOASSERTION。"
+        }
+      ],
+      "full_name": "zed-industries/zed",
+      "license_spdx": "NOASSERTION",
+      "limitations": [
+        "当前 README 只列出 macOS、Linux 和 Windows，Web 等平台尚未提供；移动端等未提及。",
+        "元数据许可证为 NOASSERTION，README 虽说明主要为 GPL-3.0-or-later 且部分为 Apache-2.0，但具体分发与合规需自行核实，不能据此推断法律适用性。",
+        "未提供可验证的独立性能测试或多人协作质量数据，README 中的“高性能”等描述属于项目自述。",
+        "README 链接了多平台构建文档，说明本地开发需按文档准备环境；具体门槛未在 README 展开。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 340547520,
+      "sources": [
+        {
+          "excerpt": "zed-industries/zed Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
+          "id": "metadata",
+          "url": "https://github.com/zed-industries/zed"
+        },
+        {
+          "excerpt": "Zed source code is licensed primarily under GPL-3.0-or-later, with Apache-2.0 components where marked. License information for third party dependencies must be correctly provided for CI to pass.",
+          "id": "readme",
+          "url": "https://github.com/zed-industries/zed/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-11-12T08:24:20.271685Z",
+        "stars_total": 94758
+      },
+      "summary": "Zed 是一个主打高性能与多人协作的代码编辑器，支持 macOS、Linux 和 Windows，源码主要采用 GPL-3.0-or-later，部分组件标注为 Apache-2.0。",
+      "try_it": [
+        "先阅读 README 的平台支持与安装说明，确认目标系统是否在支持范围内。",
+        "查看开发文档中对应平台的构建说明，评估本地开发与参与贡献的环境成本。",
+        "若关注多人协作编辑，查阅项目文档和讨论，明确功能边界、网络依赖与隐私要求。",
+        "在考虑分发或集成前，请合规人员核对 GPL-3.0-or-later、Apache-2.0 标注及第三方依赖许可。"
+      ],
+      "url": "https://github.com/zed-industries/zed",
+      "why": "对开发者可作为日常编码工具；对编辑器与 IDE 产品团队，其多人协作、跨平台和性能方向可能带来产品与工程启发，但实际性能与协作体验仍需自行验证。"
+    },
+    {
+      "audience": "使用 Google Cloud、Gemini、Google Ads 等技术栈的开发者、SRE、平台与安全工程团队，以及构建代理技能库的工程负责人。",
+      "category": "engineering",
+      "claims": [
+        {
+          "evidence_ids": [
+            "metadata",
+            "readme"
+          ],
+          "text": "该仓库描述为面向 Google 产品与技术的 Agent Skills，包含 Google Cloud。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 列出 Cloud、AI/ML、基础设施、数据库与分析、安全与身份等多个技能目录。"
+        },
+        {
+          "evidence_ids": [
+            "metadata",
+            "readme"
+          ],
+          "text": "仓库使用 Apache-2.0 许可证。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 提供通过 npx skills 安装与更新技能的说明。"
+        }
+      ],
+      "full_name": "google/skills",
+      "license_spdx": "Apache-2.0",
+      "limitations": [
+        "主要覆盖 Google 产品与技术，非 Google 技术栈场景的适用性可能有限。",
+        "README 未说明各技能的质量、更新频率或跨代理兼容性的系统评估方法。",
+        "技能内容以说明性材料为主，可能依赖具体代理工具和外部 Google Cloud 环境；本条目未验证实际运行效果。",
+        "安装说明依赖 npx 与 Node.js，离线或受限网络环境可能不便。",
+        "许可证仅按输入标注为 Apache-2.0，不推断其对具体使用场景的法律适用性。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1197652028,
+      "sources": [
+        {
+          "excerpt": "google/skills Agent Skills for Google products and technologies",
+          "id": "metadata",
+          "url": "https://github.com/google/skills"
+        },
+        {
+          "excerpt": "When prompted, select specific skills or all skills, the target agents to configure, and the installation scope (project or global).",
+          "id": "readme",
+          "url": "https://github.com/google/skills/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-11-12T08:24:20.271685Z",
+        "stars_total": 23983
+      },
+      "summary": "面向 Google 产品与技术的 Agent Skills 合集，覆盖 Google Cloud、Gemini、GKE、BigQuery、安全与广告等主题。",
+      "try_it": [
+        "先阅读技能目录，挑选与当前 Google Cloud 任务最接近的一个技能，检查其输入、步骤和验证条件。",
+        "在受控测试项目中，用一个小型场景验证某个技能的建议是否可执行、是否要求过宽权限。",
+        "对比同类技能（如 GKE 排障与 BigQuery 优化）的覆盖范围，记录缺失前提和人工复核点。",
+        "若用于团队，建立技能版本、许可证和变更审查记录，并让资深工程师复核高风险操作建议。"
+      ],
+      "url": "https://github.com/google/skills",
+      "why": "它把云产品操作、架构选型、排障和安全治理等知识组织成可被代理加载的技能，可能帮助工程团队在具体任务中减少检索与提示组织成本；但技能只是说明性内容，实际效果需在受控环境中逐项验证。"
+    }
+  ],
+  "scheduled_for": "2026-11-12",
+  "schema_version": 1,
+  "summary": "从公开资料中精选 6 个值得进一步了解的项目，附适用场景、限制和原始证据。",
+  "title": "开源周刊 · 2026-11-12"
+}

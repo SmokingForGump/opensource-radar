@@ -1,0 +1,458 @@
+{
+  "baseline_note": "本期为定时榜单快照；采集时间如上。未建立可比历史基线的项目不作增长判断。",
+  "edition": "weekly",
+  "id": "weekly-2026-11-19",
+  "observed_at": "2026-11-19T08:51:55.231880Z",
+  "projects": [
+    {
+      "audience": "使用 Claude Code、Codex、Copilot CLI 等 AI 编码代理的开发者、技术负责人，以及需要审阅计划、文档和 PR/MR 的团队。",
+      "category": "engineering",
+      "claims": [
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "仓库描述称其目标是帮助用户跟踪代理、塑造决策、规划、标注、审阅代码并与团队共享，并可一键把反馈发给代理。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 称 Plannotator 是面向 AI 编码代理的本地浏览器审阅界面，支持 Claude Code、Codex、Copilot CLI 等多个代理。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明它通过插件、钩子和命令接入代理，在代理提出计划或完成工作时打开浏览器审阅界面并回传反馈。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明代码审阅支持本地改动、远程 PR/MR，以及 Git、GitButler、Jujutsu、Perforce、GitHub 和 GitLab。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明远程模式下服务器监听 0.0.0.0 且无登录，并提醒限制端口暴露范围。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "输入元数据标明该仓库许可证为 Apache-2.0。"
+        }
+      ],
+      "full_name": "backnotprop/plannotator",
+      "license_spdx": "Apache-2.0",
+      "limitations": [
+        "需要依赖具体代理的插件、钩子或命令接入；README 也注明不同代理的能力并不完全一致，例如 Droid 目前仅提供命令，部分 Codex 原生 Windows 钩子仍属实验性。",
+        "远程、SSH 或容器模式会让服务监听 0.0.0.0 且无登录，README 明确提示能访问该端口的人均可使用，需要自行隔离网络。",
+        "分享链接的可见性依赖持有完整链接；README 说明任何拿到完整链接的人都能读取，敏感内容需谨慎。",
+        "安装器会访问 GitHub、npm 等网络资源并配置多个代理文件，离线或受限网络环境可能不适用。",
+        "本条目未实际运行，无法验证安装体验、性能、稳定性和跨代理兼容性。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1123956658,
+      "sources": [
+        {
+          "excerpt": "backnotprop/plannotator The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
+          "id": "metadata",
+          "url": "https://github.com/backnotprop/plannotator"
+        },
+        {
+          "excerpt": "Plannotator is a local, browser-based review surface for AI coding agents: Claude Code, Codex, Copilot CLI, Gemini CLI, OpenCode, Kiro, Droid, Amp, DeepSeek Harness, and Pi. Plannotator Inbox also works with personal assistants (Grok Bot, Muse, Hermes, OpenClaw).",
+          "id": "readme",
+          "url": "https://github.com/backnotprop/plannotator/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-11-19T08:51:55.231880Z",
+        "stars_total": 13549
+      },
+      "summary": "Plannotator 是面向 AI 编码代理的本地浏览器审阅工作台，用批注、代码审阅和 Inbox 把人的反馈回传给代理。",
+      "try_it": [
+        "在你的编码代理提出计划时，留意浏览器自动打开的审阅界面，尝试添加一条批注并回传决定。",
+        "选取一处本地未提交改动，走一遍逐行评论和反馈回传流程，观察代理如何响应。",
+        "用一份 Markdown 规格或 HTML 报告做标注，比较文档审阅与代码审阅的交互差异。",
+        "若同时使用多个代理，试用 Inbox 集中查看待决问题与审阅项。",
+        "在隔离的本地或远程环境中测试端口暴露和分享设置，确认团队使用边界。"
+      ],
+      "url": "https://github.com/backnotprop/plannotator",
+      "why": "它把代理生成的计划、文档、HTML 和代码差异集中到可批注的审阅界面，并把反馈结构化回传，形成人在回路中的闭环；对多代理协作，可能降低切换成本并提升决策可追溯性。"
+    },
+    {
+      "audience": "使用 React 19 的前端团队、设计系统维护者、需要统一多产品体验的组织，以及希望让 AI 编码助手遵循组件规范的产品研发团队。",
+      "category": "engineering",
+      "claims": [
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 标注 Astryx 当前处于 Beta 阶段。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 称 Astryx 基于 React 19+ 与 StyleX 构建，并提供 150+ 可访问组件、主题和深色模式。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 称该项目在 Meta 内部发展八年，并用于 13,000+ 应用。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明 @astryxdesign/charts 与 @astryxdesign/vega 仅以 @canary 标签发布，尚无稳定版本。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "GitHub 元数据记录该仓库许可证为 MIT，星标总数为 30,716。"
+        }
+      ],
+      "full_name": "meta/astryx",
+      "license_spdx": "MIT",
+      "limitations": [
+        "README 明确标注项目仍处于 Beta，接口与工作流可能变化。",
+        "要求 React 19 及以上，旧项目迁移可能需要额外改造。",
+        "图表相关包仅提供 canary 发布，README 表示尚无稳定版本。",
+        "“面向 AI 助手”的实际效果缺少独立验证，仍需团队建立代码审查与可访问性测试流程。",
+        "输入中未提供性能、可访问性实测数据或长期维护承诺，选型前应自行验证。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1131202426,
+      "sources": [
+        {
+          "excerpt": "meta/astryx An open source design system that's fully customizable and agent ready",
+          "id": "metadata",
+          "url": "https://github.com/meta/astryx"
+        },
+        {
+          "excerpt": "Astryx is an open source design system that grew inside Meta over the last eight years, where it became the most-used and largest design system in the company — powering 13,000+ apps and shaped by the engineers, designers, and product teams who depend on it every day. It ships 150+ accessible components, brand-level theming, dark mode, ready-to-ship templates, and a CLI as one cohesive system. You import pre-built CSS and use typed React components — no build plugin, no styling library to adopt — and both people and AI assistants build with the same tooling.",
+          "id": "readme",
+          "url": "https://github.com/meta/astryx/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-11-19T08:51:55.231880Z",
+        "stars_total": 30716
+      },
+      "summary": "一套源自 Meta 内部实践、支持深度主题定制并面向人与 AI 协作开发的 React 设计系统。",
+      "try_it": [
+        "先浏览官方文档与 Storybook，按团队现有设计语言核对组件覆盖度。",
+        "在沙盒中用同一业务页面尝试切换两套主题，评估定制成本与视觉一致性。",
+        "挑选一个表单或表格页面，手动检查键盘操作、焦点管理和屏幕阅读器体验。",
+        "参考 CLI 生成的代理指南，让 AI 助手实现小范围页面改动，再由开发者审查代码与可访问性。"
+      ],
+      "url": "https://github.com/meta/astryx",
+      "why": "对工程团队而言，它把 150+ 组件、主题、CLI 和代理可读文档打包成统一工作流；组件内部可组合、可用 swizzle 取出源码，消费端还能用现有 CSS 方案覆盖样式，可能降低设计系统落地与定制成本。对产品团队，它提供从基础组件到页面模式的参考，可能帮助更快统一多产品体验；其“同一套工具服务人与 AI”的设计也值得关注。"
+    },
+    {
+      "audience": "使用 Stitch，或希望把设计稿转成前端代码的产品设计、前端工程和 AI 编码代理使用者。",
+      "category": "product",
+      "claims": [
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "仓库提供面向 Google Stitch 的 Agent Skills 与插件集合，并遵循 Agent Skills 开放标准。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 将插件分为设计、构建和工具三类，并列出设计生成、设计系统管理、React/React Native 代码生成等技能。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "使用这些技能需要配置并运行 Stitch MCP 服务。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 明确该项目不是 Google 官方支持产品。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "仓库元数据标注许可证为 Apache-2.0。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "仓库元数据记录 star 数为 10531。"
+        }
+      ],
+      "full_name": "google-labs-code/stitch-skills",
+      "license_spdx": "Apache-2.0",
+      "limitations": [
+        "需要先完成 Stitch MCP 的配置与凭证设置，不能脱离该外部服务独立使用。",
+        "README 说明该项目不是 Google 官方支持产品，支持与维护范围可能有限。",
+        "技能之间存在相互依赖，选择性安装时需要自行补齐依赖。",
+        "OpenCode 需手动安装，且技能名称和工具名可能需要适配。",
+        "输入材料未提供实际运行、性能或商业可用性的验证结果。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1135847870,
+      "sources": [
+        {
+          "excerpt": "google-labs-code/stitch-skills A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+          "id": "metadata",
+          "url": "https://github.com/google-labs-code/stitch-skills"
+        },
+        {
+          "excerpt": "All new skills need to follow the file structure above to implement the Agent Skills open standard.",
+          "id": "readme",
+          "url": "https://github.com/google-labs-code/stitch-skills/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-11-19T08:51:55.231880Z",
+        "stars_total": 10531
+      },
+      "summary": "面向 Google Stitch 的 Agent Skills 与插件集合，覆盖从设计生成、设计系统管理到 React/React Native 代码生成的工作流。",
+      "try_it": [
+        "先按 Stitch MCP 配置说明确认编码代理能连接 Stitch 服务。",
+        "从一个简单页面的设计生成或代码转设计任务开始，观察输出质量。",
+        "在已有前端项目里试用 DESIGN.md 提取，检查设计令牌是否可复用。",
+        "需要 React 或 React Native 时，先用单个屏幕评估组件生成与样式一致性。",
+        "记录不同代理下的安装与工具名差异，再决定是否采用整套插件。"
+      ],
+      "url": "https://github.com/google-labs-code/stitch-skills",
+      "why": "README 显示它把 Stitch 设计工作流封装为可被多种编码代理加载的技能，并列出设计、构建、工具三类插件；这可能降低从界面设计到前端代码的衔接成本。Apache-2.0 许可证和清晰结构便于团队评估与复用，但实际效果仍需在配置 Stitch MCP 后验证。"
+    },
+    {
+      "audience": "使用 Claude、Cursor、Copilot 等 MCP 客户端的开发者、前端与性能工程师，以及构建代理工具的团队。",
+      "category": "engineering",
+      "claims": [
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "该仓库提供 MCP 服务器和 CLI，让编码代理控制并检查运行中的 Chrome。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "仓库许可证标识为 Apache-2.0。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 声明性能工具可能向 Google CrUX API 发送 trace URL。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "仓库 stars 总数为 58269。"
+        }
+      ],
+      "full_name": "ChromeDevTools/chrome-devtools-mcp",
+      "license_spdx": "Apache-2.0",
+      "limitations": [
+        "官方仅支持 Google Chrome 与 Chrome for Testing，其他 Chromium 浏览器不保证兼容。",
+        "会把浏览器实例内容暴露给 MCP 客户端，存在敏感或个人信息泄露风险。",
+        "性能工具可能向 Google CrUX API 发送 trace URL，除非显式关闭。",
+        "使用统计默认开启，需要另行选择退出。",
+        "依赖 Node.js LTS、Chrome 稳定版和 npm，并需保持技能文件与服务器版本同步。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1054793726,
+      "sources": [
+        {
+          "excerpt": "ChromeDevTools/chrome-devtools-mcp Chrome DevTools for coding agents",
+          "id": "metadata",
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp"
+        },
+        {
+          "excerpt": "`chrome-devtools-mcp` exposes content of the browser instance to the MCP clients allowing them to inspect, debug, and modify any data in the browser or DevTools. Avoid sharing sensitive or personal information that you don't want to share with MCP clients.",
+          "id": "readme",
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-11-19T08:51:55.231880Z",
+        "stars_total": 58269
+      },
+      "summary": "面向编码代理的 Chrome DevTools MCP 服务器与 CLI，用于浏览器自动化、调试和性能分析。",
+      "try_it": [
+        "在支持的 MCP 客户端中配置服务器后，用示例提示检查页面性能，观察是否生成性能 trace。",
+        "对本地测试页面排查网络请求和控制台错误，验证代理能否读取带 source map 的堆栈信息。",
+        "在隔离配置下比较精简工具集与完整工具集对同一浏览器任务的支持差异。",
+        "评估性能洞察与 CrUX 字段数据对团队工作流的补充价值，并先确认隐私与遥测设置。"
+      ],
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "why": "它把实时 Chrome 的 DevTools 能力接入编码代理，可能减少浏览器调试与性能排查时的上下文切换；MCP 与 CLI 双入口也便于嵌入不同开发工作流。"
+    },
+    {
+      "audience": "AI 应用开发者、代理产品设计者、需要文档自动化与知识管理的技术团队",
+      "category": "engineering",
+      "claims": [
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "该仓库是 Anthropic 面向 Claude 的 Agent Skills 公开实现仓库。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "每个技能自包含在独立文件夹中，并以 SKILL.md 承载指令和元数据。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "仓库包含创意设计、开发技术、企业沟通和文档技能等示例，并提供规范与模板目录。"
+        },
+        {
+          "evidence_ids": [
+            "readme",
+            "metadata"
+          ],
+          "text": "README 说明许多技能以及 docx、pdf、pptx、xlsx 文档技能采用 Apache 2.0，但元数据未给出统一 SPDX 许可证。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 明确这些技能仅供演示和教育，实际行为可能不同，关键任务前应自行充分测试。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "GitHub 元数据记录约 197,412 stars。"
+        }
+      ],
+      "full_name": "anthropics/skills",
+      "license_spdx": null,
+      "limitations": [
+        "README 明确说明这些技能仅供演示和教育，实际行为可能不同，关键任务前应自行充分测试。",
+        "元数据未给出统一 SPDX 许可证；README 仅说明许多技能及部分文档技能采用 Apache 2.0，不能据此推定所有子目录的许可状况。",
+        "技能依赖 Claude 的技能加载机制与相应产品入口；在给定材料中未说明其与其他代理框架的兼容性。",
+        "未提供可验证的性能、质量或生产适用性基准，不能据此判断大规模部署效果。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1061953414,
+      "sources": [
+        {
+          "excerpt": "anthropics/skills Public repository for Agent Skills",
+          "id": "metadata",
+          "url": "https://github.com/anthropics/skills"
+        },
+        {
+          "excerpt": "Skills are folders of instructions, scripts, and resources that Claude loads dynamically to improve performance on specialized tasks. Skills teach Claude how to complete specific tasks in a repeatable way, whether that's creating documents with your company's brand guidelines, analyzing data using your organization's specific workflows, or automating personal tasks.",
+          "id": "readme",
+          "url": "https://github.com/anthropics/skills/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-11-19T08:51:55.231880Z",
+        "stars_total": 197412
+      },
+      "summary": "官方 Agent Skills 示例、规范与模板仓库，展示了可复用技能及文档处理实现。",
+      "try_it": [
+        "浏览规范与模板目录，梳理一个技能的最小结构、命名方式和描述要求。",
+        "对比 docx、pdf、pptx、xlsx 等文档技能的组织方式，提炼复杂技能的分层设计与资源管理思路。",
+        "选取一个内部重复性流程，起草自包含的技能说明与示例，并在隔离测试环境中验证边界和失败情形。",
+        "评估示例技能用于团队知识沉淀、文档生成或企业沟通自动化的可行性，同时记录依赖、许可和人工复核环节。"
+      ],
+      "url": "https://github.com/anthropics/skills",
+      "why": "事实层面，仓库提供官方技能示例、Agent Skills 规范、模板，以及 docx、pdf、pptx、xlsx 等文档技能源码；推断层面，它可能帮助团队理解如何把业务流程封装为可复用代理技能，并借鉴复杂文档技能的工程组织方式。价值主要在工程落地与产品启发，实际效果仍需在目标环境中验证。"
+    },
+    {
+      "audience": "希望以较低运维成本自动跟踪多市场自选股、并能自行配置第三方 API 的个人研究者或投资者",
+      "category": "product",
+      "claims": [
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "项目描述为 LLM 驱动的多市场股票智能分析系统，支持多源行情、实时新闻、决策看板与自动推送。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 列出 A股、港股、美股、日股、韩股、台股和 ETF 等市场覆盖。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明默认内置 AkShare、Baostock、YFinance 等免费行情源，但稳定性不保证。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 声明项目仅供学习和研究使用，不构成任何投资建议。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "元数据标注许可证为 MIT。"
+        }
+      ],
+      "full_name": "ZhuLinsen/daily_stock_analysis",
+      "license_spdx": "MIT",
+      "limitations": [
+        "README 明确项目仅供学习和研究使用，不构成投资建议，输出不能替代独立判断。",
+        "免费行情源受上游限流、接口变动和网络波动影响，稳定性不保证。",
+        "需要配置至少一个 AI 模型与一个通知渠道，并配置自选股，实际使用依赖多个第三方服务。",
+        "多市场覆盖和数据字段完整度受各数据源能力边界限制。",
+        "本次仅审阅公开 README 与元数据，未验证实际运行、分析准确性或推送效果。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1131513930,
+      "sources": [
+        {
+          "excerpt": "ZhuLinsen/daily_stock_analysis LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+          "id": "metadata",
+          "url": "https://github.com/ZhuLinsen/daily_stock_analysis"
+        },
+        {
+          "excerpt": "本项目仅供学习和研究使用，不构成任何投资建议。股市有风险，投资需谨慎。作者不对使用本项目产生的任何损失负责。",
+          "id": "readme",
+          "url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-11-19T08:51:55.231880Z",
+        "stars_total": 73426
+      },
+      "summary": "一个由 LLM 驱动的多市场股票分析系统，聚合行情与新闻并生成决策看板，可通过多种渠道自动推送。",
+      "try_it": [
+        "先阅读 README 中的快速开始和完整配置指南，梳理所需 AI 模型、通知渠道与自选股配置。",
+        "用少量自选股做一次手动分析，检查报告结构、数据来源标注和风险提示是否符合预期。",
+        "在长期定时运行前，比较免费数据源与 token 型数据源在覆盖市场和稳定字段上的差异。",
+        "将系统输出仅作为研究参考，并与独立行情和公告信息交叉核对。"
+      ],
+      "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+      "why": "其价值在于把多市场行情、新闻、LLM 分析与推送串成可定时运行的流程，可能降低个人持续跟踪自选股的操作成本；但数据源和分析结果需要独立核验，不能视为投资建议。"
+    }
+  ],
+  "scheduled_for": "2026-11-19",
+  "schema_version": 1,
+  "summary": "从公开资料中精选 6 个值得进一步了解的项目，附适用场景、限制和原始证据。",
+  "title": "开源周刊 · 2026-11-19"
+}

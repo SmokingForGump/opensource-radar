@@ -1,0 +1,312 @@
+{
+  "baseline_note": "本期为定时榜单快照；采集时间如上。未建立可比历史基线的项目不作增长判断。",
+  "edition": "monthly",
+  "id": "monthly-2026-11-22",
+  "observed_at": "2026-11-22T08:03:59.395207Z",
+  "projects": [
+    {
+      "audience": "希望在本机试验多代理工作流、关注本地数据与逐项审批的开发者、技术爱好者，以及需要个人自动化助手的小团队。",
+      "category": "product",
+      "claims": [
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "仓库元数据标明项目采用 Apache-2.0 许可证。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "仓库元数据标明约有 26614 个 stars。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 将项目描述为开源 Grok Bot 替代品，并强调 bring-your-own-agent 与 local-first。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明每个机器人可通过本地 claude、codex 或 grok CLI 运行，并可在设置中指向自定义 CLI 二进制。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明机器人可使用云端 Linux 桌面、隔离 Local VM 或经认证的主机控制，并通过 Composio 连接大量应用。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明应用与 harness 服务通过 HTTP 命令和单一 SSE 事件流通信，转录、密钥和事件存于 ~/.openmausbot。"
+        }
+      ],
+      "full_name": "milind-soni/OpenMausBot",
+      "license_spdx": "Apache-2.0",
+      "limitations": [
+        "源码运行要求 Node 24+、pnpm 以及至少一个 claude、codex 或 grok CLI，并涉及本地登录，环境门槛较高。",
+        "桌面支持集中在 macOS、Windows 和 Ubuntu 24.04 x64；Ubuntu 标为 beta，Fedora 为社区支持，Wayland 主机控制仍禁用。",
+        "Windows 安装包尚未代码签名，README 提示 SmartScreen 会显示未知发布者。",
+        "云端电脑、应用连接和语音等功能依赖外部服务与密钥，实际体验可能受账户、地区和服务条款影响。",
+        "当前输入未提供独立性能、安全性或长期维护验证，README 中的能力描述属于项目自述。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1331261687,
+      "sources": [
+        {
+          "excerpt": "milind-soni/OpenMausBot Open-source Grok Bot alternative with a virtual machine that bots can use",
+          "id": "metadata",
+          "url": "https://github.com/milind-soni/OpenMausBot"
+        },
+        {
+          "excerpt": "Every bot in the sidebar is a real agent — Claude or Codex running locally under the hood — with its own personality, its own model, its own cloud computer, and its own connected apps. Talk to them like contacts. Watch them work. Approve what matters.",
+          "id": "readme",
+          "url": "https://github.com/milind-soni/OpenMausBot/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-11-22T08:03:59.395207Z",
+        "stars_total": 26614
+      },
+      "summary": "一个把多个本地 AI 代理做成聊天联系人、并为每个代理配置模型、电脑和已连接应用的开源桌面项目。",
+      "try_it": [
+        "先用一个低风险的个人文档整理任务，观察机器人如何拆分步骤、请求权限并留下审批记录。",
+        "在独立测试目录中让机器人总结公开资料，检查本地数据存放位置和对话事件是否符合预期。",
+        "比较不同模型与语音功能是否符合需要，再决定是否连接邮件、代码托管等外部应用。",
+        "如果考虑团队使用，先评估安装平台、外部服务依赖和密钥管理方式，避免直接接入敏感账户。"
+      ],
+      "url": "https://github.com/milind-soni/OpenMausBot",
+      "why": "它的启发在于把多代理协作、逐项权限审批和本地优先的数据管理收进聊天式界面，可能让个人或小团队更容易试验代理工作流；Apache-2.0 许可证与较完整的架构文档也便于研究其设计。"
+    },
+    {
+      "audience": "已使用 Claude Code、Codex 等编码代理，并希望远程或跨设备管理任务的开发者与小型工程团队。",
+      "category": "engineering",
+      "claims": [
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "仓库元数据将其描述为可从任何电脑或手机控制 Claude Code、Codex 等编码代理的工具。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明 T3 Code 在本机运行编码代理，并提供桌面、网页和手机客户端共享同一线程。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明使用 T3 Code 需要至少一个已安装并登录的代理。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "仓库元数据显示许可证为 MIT，Stars 总数为 70137。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 称 T3 Code 不转售 token，而是驱动用户已登录的代理。"
+        }
+      ],
+      "full_name": "pingdotgg/t3code",
+      "license_spdx": "MIT",
+      "limitations": [
+        "需要预先安装并登录至少一个受支持的编码代理，不能脱离这些代理独立使用。",
+        "远程访问依赖网络配置或第三方连接方式，暴露到公网时的安全边界需自行评估。",
+        "README 的性能主张（如掉帧即 bug）未在给定证据中提供可复现的基准数据。",
+        "手机端和桌面端依赖应用商店或包管理器分发，平台可用性可能变化。",
+        "项目声明评审能力有限，功能提案需先获讨论批准，社区贡献门槛可能较高。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1153130349,
+      "sources": [
+        {
+          "excerpt": "pingdotgg/t3code The best way to control Claude Code, Codex and more from any computer or phone",
+          "id": "metadata",
+          "url": "https://github.com/pingdotgg/t3code"
+        },
+        {
+          "excerpt": "Nothing. We built T3 Code because we wanted the best possible development experience with agents. We were inspired by existing solutions like the Codex desktop app, Conductor, Claude Desktop and Cursor Glass, but none met our bar. We wanted something performant, remote-ready, and truly open. If we ever go the wrong direction, we want you to have everything you need to fork and build the tool that you want.",
+          "id": "readme",
+          "url": "https://github.com/pingdotgg/t3code/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-11-22T08:03:59.395207Z",
+        "stars_total": 70137
+      },
+      "summary": "一个面向编码代理的开源控制平面，让用户在本机运行代理并从桌面、网页或手机统一管理线程。",
+      "try_it": [
+        "先确认本机已有并登录一个受支持的编码代理，再评估 T3 Code 是否覆盖你的日常工作流。",
+        "用一个小型仓库创建独立线程，检查多代理切换、差异审查和提交推送的衔接是否顺畅。",
+        "在受控局域网内测试桌面与手机共享同一线程的远程审批体验，再决定是否扩展到公网。",
+        "阅读权限模式、远程访问和源代码管理文档，梳理团队使用时的权限与网络边界。"
+      ],
+      "url": "https://github.com/pingdotgg/t3code",
+      "why": "它的价值在于把多种编码代理、远程访问和 Git 工作流集中到一个界面，可能降低在设备间切换和审批代理操作的成本；README 还强调性能与开源可 fork，但实际性能和稳定性仍需独立验证。"
+    },
+    {
+      "audience": "使用 Claude Code、Cursor、Codex 等编码代理的前端开发者、设计师，以及需要 UI 质量门禁的工程团队。",
+      "category": "engineering",
+      "claims": [
+        {
+          "evidence_ids": [
+            "metadata",
+            "readme"
+          ],
+          "text": "仓库描述将其定位为面向编码代理的设计词汇，并提到 polish、bolder、critique、audit 等用法。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 列出 24 个命令，分为 steer、review、finish、iterate live、plan and set up 等类别。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 称检测器包含 62 条确定性规则，不需要 LLM 或 API key。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明安装后可运行 /impeccable init，并支持 Claude Code、Cursor、Codex CLI、GitHub Copilot 等多种工具。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "metadata 显示许可证为 Apache-2.0。"
+        }
+      ],
+      "full_name": "pbakaus/impeccable",
+      "license_spdx": "Apache-2.0",
+      "limitations": [
+        "给定 README 中未见独立基准或第三方验证，实际收益可能因模型、项目和设计目标而异。",
+        "检测器、live 模式与编辑钩子主要面向 Web 的 HTML/CSS；README 明确原生应用仅部分设计命令可用。",
+        "live 模式的 Apply 在聊天代理未轮询时可能调用外部 CLI，并按 README 所述关闭审批、权限检查与沙箱；在不受信任仓库中使用需先审查验证脚本和钩子。",
+        "关闭遥测只会停止匿名记录，不会停止获取视觉方向目录的请求；隐私敏感场景需额外评估网络行为。",
+        "安装与钩子配置涉及多种代理工具及不同信任步骤，集成面较广，维护和排障成本可能不低。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1097346685,
+      "sources": [
+        {
+          "excerpt": "pbakaus/impeccable The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
+          "id": "metadata",
+          "url": "https://github.com/pbakaus/impeccable"
+        },
+        {
+          "excerpt": "The design vocabulary for your coding agent. Steer with `polish` and `bolder`, review with `critique` and `audit`, and catch AI slop before it ships.",
+          "id": "readme",
+          "url": "https://github.com/pbakaus/impeccable/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-11-22T08:03:59.395207Z",
+        "stars_total": 114665
+      },
+      "summary": "面向编码代理的 UI 设计词汇与检测工具，覆盖设计引导、评审、审计及 CI 检查。",
+      "try_it": [
+        "先在一个已有页面的单一组件上做设计评审，观察反馈是否具体、可执行并按优先级排序。",
+        "对同一个页面分别尝试“更克制”和“更大胆”的方向，比较代理是否真的改变了视觉策略而非只换颜色。",
+        "在本地开发服务器上检查对比度、字号等需要渲染页面的规则，验证检测结果是否可复现。",
+        "在个人或内部项目中启用设计钩子，观察代理编辑 UI 文件后能否在完成前收到检查结果。",
+        "若考虑团队采用，先审查钩子、live 模式的外部调用与遥测设置，再决定是否纳入 CI 门禁。"
+      ],
+      "url": "https://github.com/pbakaus/impeccable",
+      "why": "它把“让页面更好看”拆成可命名、可复用的设计动作和分级检查，可能帮助个人与团队在 AI 编码流程中减少模板化界面并建立设计评审门禁；但规则有效性和跨工具体验仍需实际项目验证。"
+    },
+    {
+      "audience": "使用 Claude Code 的 SEO 顾问、代理机构、企业内部 SEO/内容团队，以及希望快速做站点初筛的产品与营销人员。",
+      "category": "product",
+      "claims": [
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 将项目描述为运行在 Claude Code 内的免费开源 SEO 审计插件。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "元数据记录许可证为 MIT，仓库总星标数为 31463。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 称其包含 29 个子技能和 20 个专业代理，最多 17 个代理并行工作。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明需要 Claude Code 1.0.33 或更新版本以及 Python 3.11 至 3.14。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 提到若无 Google API 密钥，Core Web Vitals 为实验室估算，索引状态由页面推断。"
+        }
+      ],
+      "full_name": "AgriciDaniel/claude-seo",
+      "license_spdx": "MIT",
+      "limitations": [
+        "README 中的审计时长、排名提升和案例结果均为项目自述，未提供可复现的独立评测。",
+        "运行依赖 Claude Code 1.0.33+ 与 Python 3.11–3.14，并按 README 说明需要准备独立运行环境和无头浏览器。",
+        "README 明确说明被分析页面与数据会发送给 Claude；报告保存在本地，但连接扩展或 API 时可能涉及第三方。",
+        "README 说明无 Google API 密钥时 Core Web Vitals 为实验室估算，索引状态由页面推断。",
+        "README 提示依赖滚动或点击才加载关键内容的页面可能产生噪声结果。",
+        "部分代理使用 Opus，完整审计可能比单页检查消耗更多 Claude 套餐额度。",
+        "它不是爬虫或大型 SEO 套件的替代品；README 也提到专业爬虫在抓取速度和深度、外链数据库方面更强。",
+        "许可证仅按输入记录为 MIT，未对法律适用性作推断。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1152014594,
+      "sources": [
+        {
+          "excerpt": "AgriciDaniel/claude-seo Universal SEO skill for Claude Code. 26 sub-skills + 19 sub-agents covering technical SEO, E-E-A-T, schema, GEO/AEO, agent readiness (Lighthouse Agentic Browsing, WebMCP, llms.txt), backlinks, local SEO, e-commerce, international SEO, Google APIs, and PDF/Excel reporting. 9 optional extensions for live SEO data.",
+          "id": "metadata",
+          "url": "https://github.com/AgriciDaniel/claude-seo"
+        },
+        {
+          "excerpt": "Claude SEO is built from 29 sub-skills and 20 specialist agents, and up to 17 agents work on your site at the same time. Every recommendation explains why it matters and how you will know it worked.",
+          "id": "readme",
+          "url": "https://github.com/AgriciDaniel/claude-seo/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-11-22T08:03:59.395207Z",
+        "stars_total": 31463
+      },
+      "summary": "这是一个运行在 Claude Code 内的开源 SEO 审计插件，用多技能与多代理生成按优先级排序的站点优化建议。",
+      "try_it": [
+        "先选择一个公开页面做单页审计，检查报告是否给出可解释的证据与可执行的修复优先级。",
+        "在同一站点上分别关注技术、内容、结构化数据和 AI 搜索四个维度，比较各维度建议是否互补而非重复。",
+        "对含 JavaScript 渲染或滚动加载内容的页面单独测试，观察结果是否稳定并记录噪声来源。",
+        "在未接入 Google API 的情况下，把 Core Web Vitals 与索引结论标记为待验证，再用官方工具交叉核对。",
+        "把生成的报告交给非技术同事阅读，评估其可理解性和是否能直接转化为任务清单。"
+      ],
+      "url": "https://github.com/AgriciDaniel/claude-seo",
+      "why": "其价值可能在于把技术 SEO、内容质量、结构化数据和 AI 搜索检查整合为可复用的代理工作流，并以报告形式沉淀；README 描述的多代理并行与按影响排序，可能适合顾问或代理机构快速完成初筛，但实际效果与准确性仍需独立验证。"
+    }
+  ],
+  "scheduled_for": "2026-11-22",
+  "schema_version": 1,
+  "summary": "从公开资料中精选 4 个值得进一步了解的项目，附适用场景、限制和原始证据。",
+  "title": "Monthly 深度精选 · 2026-11-22"
+}

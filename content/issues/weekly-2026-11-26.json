@@ -1,0 +1,447 @@
+{
+  "baseline_note": "本期为定时榜单快照；采集时间如上。未建立可比历史基线的项目不作增长判断。",
+  "edition": "weekly",
+  "id": "weekly-2026-11-26",
+  "observed_at": "2026-11-26T09:38:14.703032Z",
+  "projects": [
+    {
+      "audience": "使用 Claude Code、Codex 等 AI 编程代理的开发者、代码审阅者，以及需要让团队参与计划评审的工程团队。",
+      "category": "engineering",
+      "claims": [
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "Plannotator 是面向 AI 编程代理的本地浏览器审阅界面，可批注计划、文档、HTML 和代码差异，并把反馈发回代理。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 列出对 Claude Code、Codex、Copilot CLI、Gemini CLI、OpenCode、Kiro、Droid、Amp、DeepSeek Harness 和 Pi 等代理的支持。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "代码审阅部分说明可处理本地改动或远程 PR，并提到 Git、GitButler、Jujutsu、Perforce、GitHub 和 GitLab。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "仓库元数据标注星标数为 15153，许可证为 Apache-2.0。"
+        }
+      ],
+      "full_name": "backnotprop/plannotator",
+      "license_spdx": "Apache-2.0",
+      "limitations": [
+        "功能依赖各代理的插件、钩子或命令集成，不同代理的支持范围和配置步骤并不一致。",
+        "计划审阅在部分代理中依赖实验性钩子；README 提到原生 Windows 上的 Codex 钩子仍属实验性。",
+        "远程模式会监听所有网络接口且没有登录机制，端口若暴露给不可信网络会带来未授权访问风险。",
+        "分享链接可被任何持有完整链接的人读取，敏感计划或代码不宜直接分享。",
+        "输入仅提供 Apache-2.0 许可证元数据，未评估具体法律适用性；也未包含性能、稳定性或商业支持方面的可验证承诺。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1123956658,
+      "sources": [
+        {
+          "excerpt": "backnotprop/plannotator The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
+          "id": "metadata",
+          "url": "https://github.com/backnotprop/plannotator"
+        },
+        {
+          "excerpt": "Plannotator is a local, browser-based review surface for AI coding agents: Claude Code, Codex, Copilot CLI, Gemini CLI, OpenCode, Kiro, Droid, Amp, DeepSeek Harness, and Pi. Plannotator Inbox also works with personal assistants (Grok Bot, Muse, Hermes, OpenClaw).",
+          "id": "readme",
+          "url": "https://github.com/backnotprop/plannotator/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-11-26T09:38:14.703032Z",
+        "stars_total": 15153
+      },
+      "summary": "Plannotator 是一个面向 AI 编程代理的本地浏览器审阅工作台，用于批注计划、文档与代码差异，并将反馈回传给代理。",
+      "try_it": [
+        "选一份不含敏感信息的公开需求文档，在浏览器审阅界面中做标注，并尝试把反馈回传给代理。",
+        "用一段本地代码改动体验逐行评论、审批和反馈回传，观察代理能否据此修订。",
+        "让同事通过分享链接批注一份计划，再把反馈导入你的代理会话，验证协作闭环。",
+        "在受控的远程或容器环境中检查端口访问边界，确认只向可信网络开放。"
+      ],
+      "url": "https://github.com/backnotprop/plannotator",
+      "why": "它把代理产出的计划、文档和代码差异集中到可批注的浏览器界面，并把反馈回传给代理，可能减少多代理协作中的上下文切换与审阅遗漏；README 显示其支持多种代理，分享和归档设计也可能为团队审阅产品提供参考。"
+    },
+    {
+      "audience": "前端工程师、使用编码代理的研发团队，以及维护 Web 平台规范与工具链的开发者。",
+      "category": "engineering",
+      "claims": [
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "该项目是 GoogleChrome/modern-web-guidance 的源仓库，包含编写、校准和评估其内容的代码与文档。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 称 Modern Web Guidance 是一组把 Web 平台专业知识、最佳实践和浏览器兼容性数据嵌入编码代理的技能。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 列出 269 项现代 Web 特性，并称指南设计为节省 token。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "仓库元数据标明许可证为 Apache-2.0，星标总数为 11142。"
+        }
+      ],
+      "full_name": "GoogleChrome/modern-web-guidance-src",
+      "license_spdx": "Apache-2.0",
+      "limitations": [
+        "该仓库是源仓库，主要包含编写、校准和评估内容的代码与文档；实际技能内容位于另一仓库，使用前需理解两者关系。",
+        "README 的快速开始要求 Node.js 22 或更高版本，较旧运行环境可能不适用。",
+        "输入的 README 未提供独立第三方效果评测，无法据此确认其对编码代理生成质量或项目性能的实际提升幅度。",
+        "指南覆盖以 README 列出的现代 Web 特性为主，是否适合具体项目仍需结合浏览器兼容性、可访问性与团队规范评估。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1143633223,
+      "sources": [
+        {
+          "excerpt": "GoogleChrome/modern-web-guidance-src Keep your coding agent up to date with the latest web best practices",
+          "id": "metadata",
+          "url": "https://github.com/GoogleChrome/modern-web-guidance-src"
+        },
+        {
+          "excerpt": "Coding agents often default to older patterns because LLM training data contains vast amounts of legacy code. This often leads them to generate bloated JavaScript for tasks that now have native, high-performance web platform solutions. Even if a model knows an API exists, it often lacks the density of real-world, modern implementation patterns required for production-ready code.",
+          "id": "readme",
+          "url": "https://github.com/GoogleChrome/modern-web-guidance-src/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-11-26T09:38:14.703032Z",
+        "stars_total": 11142
+      },
+      "summary": "为编码代理提供现代 Web 平台技能、最佳实践与兼容性指引，并配套检索、安装和旧模式扫描工具。",
+      "try_it": [
+        "先阅读项目文档、贡献指南与治理说明，明确源仓库和技能内容仓库的分工。",
+        "挑选一个与当前前端项目相关的指南主题，人工核对建议是否契合项目的浏览器支持策略。",
+        "在受控分支中查看旧模式扫描结果，再决定是否采纳现代化改写建议。",
+        "把代理生成的变更纳入常规代码评审，并补充可访问性与兼容性检查。"
+      ],
+      "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+      "why": "它把浏览器平台的新能力整理成面向编码代理的指导，README 称覆盖 269 项特性并强调节省 token，可能减少代理依赖过时前端模式的情况；源仓库还包含校准与评估流程，便于团队审查内容质量。"
+    },
+    {
+      "audience": "使用 Claude、Cursor、Copilot 等代理的前端/全栈开发者、测试与性能工程师，以及构建浏览器子代理的团队。",
+      "category": "engineering",
+      "claims": [
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "该仓库标注为 Apache-2.0 许可。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 称该工具让编码代理控制并检查运行中的 Chrome 浏览器，并提供 MCP 服务器与 CLI 两种形态。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 称其可使用 Chrome DevTools 记录 trace 并提取性能洞察。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 称其使用 puppeteer 自动化 Chrome 操作，并自动等待操作结果。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 提示会将浏览器实例内容暴露给 MCP 客户端，应避免共享敏感或个人信息。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明默认收集使用统计，可通过 --no-usage-statistics 参数退出。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明官方仅支持 Google Chrome 与 Chrome for Testing。"
+        }
+      ],
+      "full_name": "ChromeDevTools/chrome-devtools-mcp",
+      "license_spdx": "Apache-2.0",
+      "limitations": [
+        "官方仅支持 Google Chrome 和 Chrome for Testing，其他 Chromium 浏览器不保证可用。",
+        "会把浏览器实例内容暴露给 MCP 客户端，需避免敏感或个人信息进入。",
+        "默认收集使用统计，且性能工具可能向 Google CrUX API 发送 trace URL；README 称可用参数关闭。",
+        "需要 Node.js LTS、Chrome 当前稳定版或更新版本以及 npm。",
+        "README 中插件与 skills 安装方式依赖具体代理客户端，且 skills 需随版本更新。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1054793726,
+      "sources": [
+        {
+          "excerpt": "ChromeDevTools/chrome-devtools-mcp Chrome DevTools for coding agents",
+          "id": "metadata",
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp"
+        },
+        {
+          "excerpt": "Chrome DevTools for agents (`chrome-devtools-mcp`) lets your coding agent (such as Antigravity, Claude, Cursor or Copilot) control and inspect a live Chrome browser. It is available as a Model-Context-Protocol (MCP) server and as a [CLI][cli]. Both give your AI coding assistant access to the full power of Chrome DevTools for reliable automation, in-depth debugging, and performance analysis.",
+          "id": "readme",
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-11-26T09:38:14.703032Z",
+        "stars_total": 59415
+      },
+      "summary": "一个让编码代理通过 MCP 或 CLI 控制并检查 Chrome 浏览器的开发者工具，支持性能追踪、网络与控制台调试以及浏览器自动化。",
+      "try_it": [
+        "先在测试环境用 MCP 客户端打开一个公开页面，让代理记录一次性能 trace，并检查网络请求与控制台错误。",
+        "比较精简工具集与完整工具集时的可用能力，确认最小权限的工具暴露范围。",
+        "在涉及登录态的页面中先划定可共享的数据边界，再验证 cookie 与会话调试能力。",
+        "将 skills 更新纳入代理工具升级流程，避免代理调用过期工具或参数。"
+      ],
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "why": "它把浏览器自动化、性能分析和调试能力封装为代理可调用的工具，可能降低编码代理做前端验证与性能排查的接入成本；但浏览器内容暴露与默认统计收集需要在使用前评估。"
+    },
+    {
+      "audience": "有长期投资、ETF 或股息股组合，同时希望以波段交易为卫星策略、愿意手动执行和记录的个人投资者与交易学习者。",
+      "category": "knowledge",
+      "claims": [
+        {
+          "evidence_ids": [
+            "metadata",
+            "readme"
+          ],
+          "text": "仓库提供基于 Claude Skills 的股票投资与交易工作流工具包，覆盖市场分析、技术图表、经济日历、筛选器和交易策略开发。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 明确说明项目仅用于教育、研究和流程改进，不构成财务、投资、税务或法律建议，也不是信号服务或券商执行平台。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 提供无付费数据 API 的五技能入门路径，可手动进行市场宽度、上升趋势、仓位计算、交易日志和复盘。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "仓库采用 MIT 许可证。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明 skills-index.yaml 是技能权威索引，workflows/*.yaml 是多技能工作流的权威来源。"
+        }
+      ],
+      "full_name": "tradermonty/claude-trading-skills",
+      "license_spdx": "MIT",
+      "limitations": [
+        "README 明确声明不构成财务、投资、税务或法律建议，也不承诺盈利。",
+        "不是自动交易系统，不替用户做买卖决策，也不提供信号服务或券商下单执行。",
+        "部分工作流依赖 FMP、FINVIZ Elite、Alpaca 等付费或第三方数据/券商集成；无 API 路径仍需公开 CSV、图表截图或本地文件。",
+        "示例输出使用虚构数据，仅作流程展示，不能视为实时市场读数或交易指令。",
+        "使用依赖 Claude Web Skills 或 Claude Code 的可用性与账户方案，相关访问方式可能变化。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1079356098,
+      "sources": [
+        {
+          "excerpt": "tradermonty/claude-trading-skills Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
+          "id": "metadata",
+          "url": "https://github.com/tradermonty/claude-trading-skills"
+        },
+        {
+          "excerpt": "Claude Trading Skills is a Claude Skills-based trading workflow toolkit for time-constrained individual investors. It is designed for investors who use long-term investing, ETFs, and dividend stocks as their core, while using disciplined swing trading as a satellite strategy when market conditions are favorable. The goal is not to outsource buy/sell decisions to AI.",
+          "id": "readme",
+          "url": "https://github.com/tradermonty/claude-trading-skills/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-11-26T09:38:14.703032Z",
+        "stars_total": 8512
+      },
+      "summary": "一个面向时间有限个人投资者的 Claude Skills 交易流程工具包，强调市场复盘、风险管理、交易计划与日志改进，而非自动交易或信号服务。",
+      "try_it": [
+        "先阅读 README 中的“No API Key Starter Path”，用公开 CSV 和本地文件手动走一遍市场宽度与上升趋势检查。",
+        "选择一个工作流清单（如每日市场检查或每周组合复盘），按其中列出的技能、决策门和产出物逐步执行。",
+        "从示例输出和离线快速开始入手，用虚构数据熟悉报告格式后再接入自己的数据。",
+        "把每笔交易记录到本地日志，并用复盘框架检查流程而非只评价盈亏。"
+      ],
+      "url": "https://github.com/tradermonty/claude-trading-skills",
+      "why": "它的价值可能在于把交易流程拆成可执行技能和工作流，并用清单、决策门和日志帮助形成纪律，适合把 AI 用于流程管理而非买卖决策；是否提升实际收益仍需自行验证。"
+    },
+    {
+      "audience": "愿意处理侧载、开发者模式和备份流程的 Apple Watch 用户与表盘定制爱好者。",
+      "category": "life",
+      "claims": [
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "仓库描述为在任意 Apple Watch 设备上启用 Hermès 表盘。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "仓库元数据标注许可证为 MIT。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 标注支持 watchOS 27.0 至 27.3 beta 1，并明确 watchOS 26 不受支持。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 提供 macOS 上的 IPA 侧载与 Xcode 构建两种安装路径，并要求 iPhone 与目标 Apple Watch 配对。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 说明 Windows 方案依赖社区工具 WatchBridge，且该工具与 Apple 及本项目无关联。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "README 提醒删除应用前应通过 HermesEnabler2 恢复 MobileGestalt 备份，并注明使用风险自担。"
+        }
+      ],
+      "full_name": "pookjw/HermesEnabler",
+      "license_spdx": "MIT",
+      "limitations": [
+        "仅支持 watchOS 27.0 至 27.3 beta 1，README 明确 watchOS 26 不受支持。",
+        "需要 iPhone 与目标 Apple Watch 配对，并在设备上开启开发者模式。",
+        "安装涉及 IPA 签名、固定 Bundle Identifier 和开发者证书管理，门槛较高。",
+        "Windows 方案依赖第三方 WatchBridge，README 说明其与 Apple 及本项目无关联。",
+        "删除应用前需先通过 HermesEnabler2 恢复 MobileGestalt 备份。",
+        "输入未包含实际运行、兼容性或稳定性测试结果。",
+        "README 注明使用风险自担。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 903349957,
+      "sources": [
+        {
+          "excerpt": "pookjw/HermesEnabler Enable Hermès Watch Faces on any Apple Watch devices",
+          "id": "metadata",
+          "url": "https://github.com/pookjw/HermesEnabler"
+        },
+        {
+          "excerpt": "Before deleting the app, always restore your MobileGestalt backup through the HermesEnabler2 app.",
+          "id": "readme",
+          "url": "https://github.com/pookjw/HermesEnabler/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-11-26T09:38:14.703032Z",
+        "stars_total": 2531
+      },
+      "summary": "一款通过侧载在受支持 watchOS 版本的 Apple Watch 上启用 Hermès 表盘的定制工具。",
+      "try_it": [
+        "先核对目标 Apple Watch 的 watchOS 版本是否在 README 标注的支持范围内。",
+        "阅读并确认 MobileGestalt 备份与恢复步骤，再评估是否在主力设备上使用。",
+        "优先在非主力设备或可恢复环境中验证，并记录固定 Bundle Identifier 与所用 Apple ID 的对应关系。",
+        "若考虑 Windows 方案，先核实第三方 WatchBridge 的来源和风险提示。"
+      ],
+      "url": "https://github.com/pookjw/HermesEnabler",
+      "why": "README 给出了 macOS 与 Windows 的安装路径、开发者模式要求以及 MobileGestalt 备份提醒，说明该项目把 iPhone 配套应用与 Watch 应用串成完整流程；可能适合想体验 Hermès 表盘但不愿更换表款的用户，不过实际效果和稳定性未在输入中验证。"
+    },
+    {
+      "audience": "关注个人财务数据自主、愿意自行部署开源服务的个人用户和开发者。",
+      "category": "life",
+      "claims": [
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "Sure 是个人财务应用，支持通过 Docker 自托管，并可从浏览器、macOS 桌面端、移动端、API 客户端和 LLM 代理访问。"
+        },
+        {
+          "evidence_ids": [
+            "readme"
+          ],
+          "text": "该仓库是已停止开发的 Maybe Finance 项目的社区维护分支。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "仓库采用 AGPL-3.0 许可证。"
+        },
+        {
+          "evidence_ids": [
+            "metadata"
+          ],
+          "text": "项目公开 stars 数为 17992。"
+        }
+      ],
+      "full_name": "we-promise/sure",
+      "license_spdx": "AGPL-3.0",
+      "limitations": [
+        "自托管和本地开发需要 PostgreSQL、Redis 等基础设施，部署与维护有一定门槛。",
+        "README 明确提到数据密集型应用存在性能问题，并提供公开性能面板供排查。",
+        "该项目是社区维护分支，而非原 Maybe Finance 官方项目；品牌与商标使用有额外限制。",
+        "AGPL-3.0 的合规义务需自行评估，本条目不提供法律判断。",
+        "README 提到 AI 相关部署模板，可能涉及外部服务与凭证配置，使用前需理解数据流向。",
+        "未提供独立的商业可用性、安全性或性能验证。",
+        "本次基于公开文档研究，未实际运行项目。"
+      ],
+      "repository_id": 1024661423,
+      "sources": [
+        {
+          "excerpt": "we-promise/sure The personal finance app for everyone (by everyone)",
+          "id": "metadata",
+          "url": "https://github.com/we-promise/sure"
+        },
+        {
+          "excerpt": "Sure is a fully working personal finance app that can be [self hosted with Docker](docs/hosting/docker.md). Sure can be accessed from a browser, the macOS desktop app, the mobile app, API clients, and LLM agents. See [Sure Clients](docs/clients.md) for an overview.",
+          "id": "readme",
+          "url": "https://github.com/we-promise/sure/blob/main/README.md"
+        }
+      ],
+      "stats": {
+        "observed_at": "2026-11-26T09:38:14.703032Z",
+        "stars_total": 17992
+      },
+      "summary": "一个可自托管、覆盖浏览器与多端客户端的个人财务应用社区分支。",
+      "try_it": [
+        "阅读自托管指南，评估是否能用 Docker 在个人环境部署并完成基础记账。",
+        "先使用演示数据体验账户、交易和报表等核心流程，再决定是否导入真实财务数据。",
+        "从浏览器、桌面端和移动端中选取一个客户端，检查日常记账与查看报表是否顺手。",
+        "若关注自动化，梳理 API 或 AI 接入场景，并优先在隔离的测试环境中验证。"
+      ],
+      "url": "https://github.com/we-promise/sure",
+      "why": "适合希望掌控个人财务数据、尝试自托管记账与财富管理工具的用户；其多端与 API/LLM 接入设计可能便于扩展自动化和个人财务知识整理，但实际体验与性能需自行验证。"
+    }
+  ],
+  "scheduled_for": "2026-11-26",
+  "schema_version": 1,
+  "summary": "从公开资料中精选 6 个值得进一步了解的项目，附适用场景、限制和原始证据。",
+  "title": "开源周刊 · 2026-11-26"
+}
